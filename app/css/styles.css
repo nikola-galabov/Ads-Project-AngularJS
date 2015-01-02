@@ -1,0 +1,64 @@
+html, body, div, h1, header, p, {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #E2F0D9;
+}
+
+header {
+	background-color: #A9D18E;
+	text-align: center;
+	border-bottom: 1px solid #507E32;
+}
+
+.btn-default {
+	background-color: #70AD47;
+	color: white;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.wrapper {
+	background-color: #A9D18E;
+	border: 1px solid #507E32;
+	box-shadow: 3px 3px 2px #AAB5A3;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.container {
+	margin-top: 25px;
+}
+
+hr {
+	border-color: #507E32;
+	box-shadow: 3px 3px 2px #AAB5A3;
+}
+
+ul li a {
+    color: black;
+}
+
+ul li {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+ul li.selected {
+    background-color: #DAA600;
+    border: 1px solid #7F6000;
+}
+
+.navbar-fixed-bottom {
+	background-color: #A9D18E;
+	text-align: center;
+	border-top: 1px solid #507E32;
+}
+
+.box {
+	background-color: #C5E0B4;
+	border: 1px dotted #8DBA70;
+	padding: 5px;
+}
