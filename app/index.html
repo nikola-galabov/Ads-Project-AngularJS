@@ -4,69 +4,35 @@
 	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body ng-app="app">
+<body ng-app="app" ng-controller="Main">
+
+  <!-- Header -->
 	<header class="nav">
 		<h1>Ads - Home</h1>
-
+    <a href="#/">Home</a>
+    <a href="#/newAd">new ad</a>
+    <a href="#/myAds">my ads</a>
+    <a href="#/editProfile">edit Profile</a>
 	</header>
 
+  <!-- Login section -->
+	<div class="container col-md-2">
+		<div class="wrapper">
+			<h3 class="text-center">To publish a new ad, please login</h3>
+			<a href="#/login" class="btn btn-default btn-lg">Login</a>
+			<a href="#/register" class="btn btn-default btn-lg">Register</a>
+		</div>
+  </div>
 	
-  		<div class="container col-md-2">
-  			<div class="wrapper">
-  				<h3 class="text-center">To publish a new ad, please login</h3>
-  				<button type="button" class="btn btn-default btn-lg">Login</button>
-  				<button type="button" class="btn btn-default btn-lg">Register</button>
-  			</div>	
-  		</div>
-  		<div class="container col-md-8">
-  			<div class="wrapper container-fluid">
-  				<div class="clearfix">
-  					<h1 class="pull-left">zaglavie</h1>
-  					<span class="pull-right">data</span>
-  				</div>
-  				<div>
-  					<div class="col-md-4 box">
-  						pic
-  					</div>
-  					<div class="col-md-8">
-  						<div class="box">content</div>
-  						<div>Name: <span class="box">Nikola</span></div>
-  						<div>Email: <span class="box">niki@abv.bg</span></div>
-  						<div>Tel: <span class="box">12345</span></div>
-  					</div>
-  				</div>
-  			</div>
-  			<div class="wrapper">
+  <ng-view>
 
-  					blabla
-  			</div>
-  			<div class="wrapper">
+  </ng-view>
 
-  					blabla
-  			</div>
-  				<nav>
-		  	<ul class="pagination">
-		    	<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-		    	<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-		    	<li class="active"><a href="#">2 <span class="sr-only">(current)</span></a></li>
-		 	</ul>
-		</nav>
-  		</div>
-  		<div class="container col-md-2">
-  			<div class="wrapper">
-  				<h3 class="text-center"><strong>Categories</strong></h3>
-  				<hr />
-  				<ul class="list-unstyled">
-  					<li class="selected"><a href="">All</a></li>
-  					<li><a href="">Cars</a></li>
-  					<li><a href="">Products</a></li>
-  					<li><a href="">Clothes</a></li>
-  				</ul>	
-  			</div>
+  <!-- Footer  -->
+	<div class="navbar-fixed-bottom"><p> &copy; 2014 by Software University Fondation. No rigths reserved.</p></div>
 
-  		</div>
-		<div class="navbar-fixed-bottom"><p> &copy; 2014 by Software University Fondation. No rigths reserved.</p></div>
-	<script type="text/javascript" src="libs/angular.min.js"></script>
+	<script type="text/javascript" src="libs/angular.js"></script>
+  <script type="text/javascript" src="libs/angular-route.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="controllers/main.js"></script>
 </body>

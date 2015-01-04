@@ -16,8 +16,12 @@ header {
 .btn-default {
 	background-color: #70AD47;
 	color: white;
-	width: 100%;
 	margin-bottom: 5px;
+	width: 150px;
+}
+
+.btn-lg {
+	width: 100%;
 }
 
 .wrapper {
@@ -61,4 +65,51 @@ ul li.selected {
 	background-color: #C5E0B4;
 	border: 1px dotted #8DBA70;
 	padding: 5px;
+}
+
+.data-container {
+	margin-bottom: 10px;
+	display: -webkit-box;
+}
+
+.form {
+	border-radius: 10px;
+}
+
+.form-group-small {
+	width: 49%;
+	display: inline-block;
+}
+
+#text{
+	height: 140px;
+    max-height: 140px; 
+    resize: none; 
+}
+
+form div.row {
+	margin-bottom: 10px;
+}
+
+.ad {
+	padding: 0;
+}
+
+.my-ad-wrapper{
+	border-right: none;
+}
+
+.my-ad-btn-wrapper {
+	border-left: none;
+}
+
+.btns-container {
+	margin: 10px;
+	padding-left: 10px;
+	border-left: 1px solid #507E32;
+	box-shadow: -1px 0px 0px #AAB5A
+}
+
+.btns-container .box { 
+	margin-bottom: 10px;
 }
