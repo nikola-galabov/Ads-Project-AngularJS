@@ -113,3 +113,9 @@ form div.row {
 .btns-container .box { 
 	margin-bottom: 10px;
 }
+
+footer {
+    background-color: #A9D18E;
+    padding: 20px;
+    border-top: 1px solid #507E32;
+}

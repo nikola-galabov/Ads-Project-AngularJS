@@ -1,6 +1,6 @@
 app.factory('adsData', function adsData($resource) {
 	var resource = $resource(
-		'http://softuni-ads.azurewebsites.net/api/user/ads/:id', 
+		'http://softuni-ads.azurewebsites.net/api/ads/:id',
 		{id: '@id'}, 
 		{ update: {
 			method: 'PUT'
