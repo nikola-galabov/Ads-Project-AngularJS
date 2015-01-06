@@ -114,6 +114,26 @@ form div.row {
 	margin-bottom: 10px;
 }
 
+.btn-default[disabled] {
+    color:gray;
+}
+
+input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+}
+
+.validation-error {
+    background-color: red;
+    color: #ffffff;
+    padding: 0 15px;
+    position: absolute;
+    border-radius: 7px;
+}
+
+input.ng-valid.ng-touched {
+    background-color: #78FA89;
+}
+
 footer {
     background-color: #A9D18E;
     padding: 20px;

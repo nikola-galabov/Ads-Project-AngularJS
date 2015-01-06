@@ -1,49 +1,69 @@
 <div class="col-md-10 container">
-	
-	<form class="container-fluid form wrapper col-md-10 col-md-offset-1">
+    <div data-ng-show="alertShow" alert type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</div>
+	<form class="container-fluid form wrapper col-md-10 col-md-offset-1" novalidate name="registration">
 		<h3 class="text-center"><strong>User Registration</strong></h3>
 		<hr />
 
 		<div class="form-group form-group-small">
 			<label for="username">Username:</label>
-			<input class="form-control" id="username" type="text" data-ng-model="user.username" required />
+			<input class="form-control" id="username" name="username" type="text" data-ng-model="user.username" required/>
+
+            <span class="validation-error" ng-show="registration.username.$touched && (registration.username.$dirty || registration.username.$invalid)">
+                <span ng-show="registration.username.$error.required">Required.</span>
+            </span>
 		</div><br>
 
 		<div class="form-group form-group-small">
 			<label for="password">Password:</label>
-			<input class="form-control" id="password" type="password" data-ng-model="user.password" required />
+			<input class="form-control" id="password" type="password" name="password" data-ng-model="user.password" minlength="2" maxlength="100" required />
+
+             <span class="validation-error" ng-show="registration.password.$touched && (registration.password.$dirty || registration.password.$invalid)">
+                <span ng-show="registration.password.$error.required">Required.</span>
+                <span ng-show="registration.password.$error.minlength || registration.password.$error.maxlength">Password must be in range [2;100]</span>
+            </span>
 		</div>
 
 		<div class="form-group form-group-small">
 			<label for="confirm-password">Confimr Password:</label>
-			<input class="form-control" id="confirm-password" type="password" data-ng-model="user.confirmPassword" required />
+			<input class="form-control" id="confirm-password" name="confirmPassword" type="password" data-ng-model="user.confirmPassword" required compare-to="user.password"/>
+            <span class="validation-error" ng-show="registration.confirmPassword.$touched && (registration.confirmPassword.$dirty || registration.confirmPassword.$invalid)">
+                <span ng-show="registration.confirmPassword.$error.required">Required.</span>
+                <span ng-show="!registration.confirmPassword.$error.required && registration.confirmPassword.$error.compareTo">Password doesn't match!</span>
+            </span>
 		</div>
 
 		<div class="form-group form-group-small">
 			<label for="Name">Name:</label>
-			<input class="form-control" id="name" type="text" data-ng-model="user.name" required />
+			<input class="form-control" id="name" name="name" type="text" data-ng-model="user.name" required />
+            <span class="validation-error" ng-show="registration.name.$touched && (registration.name.$dirty || registration.name.$invalid)">
+                <span ng-show="registration.name.$error.required">Required.</span>
+            </span>
 		</div>
 
 		<div class="form-group form-group-small">
 			<label for="mail">Email:</label>
-			<input class="form-control" id="mail" type="email" data-ng-model="user.email" required />
+			<input class="form-control" id="mail" name="email" type="email" data-ng-model="user.email" required />
+
+            <span class="validation-error" ng-show="registration.email.$touched && (registration.email.$dirty || registration.email.$invalid)">
+                <span ng-show="registration.email.$error.required">Required.</span>
+                <span ng-show="registration.email.$error.email">Invaild email!</span>
+            </span>
 		</div>
 
 		<div class="form-group form-group-small">
 			<label for="phone">Phone:</label>
-			<input class="form-control" id="phone" type="text" data-ng-model="user.phone" required />
+			<input class="form-control" id="phone" type="text" data-ng-model="user.phone" />
 		</div>
 
 		<div class="form-group form-group-small">
 			<label for="town">Town:</label>
-			<input class="form-control" id="town" type="text" data-ng-model="user.townId" required />
+			<input class="form-control" id="town" type="text" data-ng-model="user.townId" />
 		</div>
-
+        
 		<div class="form-group">
-			<button data-ng-click="register()" class="pull-left btn btn-default">Register</button>
+			<button data-ng-click="register()" ng-disabled="!registration.$valid" class="pull-left btn btn-default">Register</button>
 			<a href="#/login" class="pull-right">Login here</a>
 		</div>
 	</form>
     {{user}}
-    {{register}}
 </div>

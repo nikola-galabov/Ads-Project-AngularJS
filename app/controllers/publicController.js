@@ -29,9 +29,18 @@ publicApp.controller('PublicController', function PublicController($scope, publi
         townId:'',
         phone:''
     }
-
+    $scope.alertShow = false;
     $scope.register = function() {
-        return $scope.user = publicData.registerUser($scope.user);
+         publicData.registerUser($scope.user)
+            .$promise.then(
+                function( value ){
+                    $scope.user = value;
+                    $scope.alert = { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
+                },
+
+                function( error ){
+                    $scope.alert = { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' };
+                }).then($scope.alertShow=true);
     }
 
 });
