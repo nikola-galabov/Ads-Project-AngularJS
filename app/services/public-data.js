@@ -1,18 +1,13 @@
 publicApp.factory('publicData', function publicData($resource) {
-    var ads = $resource('http://softuni-ads.azurewebsites.net/api/ads:categoryId',{categoryId: '@category'});
+    var ads = $resource('http://softuni-ads.azurewebsites.net/api/ads?PageSize=3');
     var categories = $resource('http://softuni-ads.azurewebsites.net/api/categories');
     var towns = $resource('http://softuni-ads.azurewebsites.net/api/towns');
 
-    function getAllAds() {
-        return ads.get();
-    }
-
-    function getAdsByCategory(category) {
-        return ads.get({category: category});
-    }
-
-    function getAdsByTown(town) {
-        return ads.get({filter: town});
+    function getAds(categoryId,townId,page) {
+        if(page == null) {
+            page = 1;
+        }
+        return ads.get({categoryId: categoryId,townId: townId, startPage: page});
     }
 
     function getCategories() {
@@ -20,12 +15,11 @@ publicApp.factory('publicData', function publicData($resource) {
     }
 
     function getTowns() {
-        return categories.query();
+        return towns.query();
     }
 
     return {
-        getAllAds: getAllAds,
-        getAdsByCategory: getAdsByCategory,
+        getAds: getAds,
         getCategories: getCategories,
         getTowns: getTowns
     }

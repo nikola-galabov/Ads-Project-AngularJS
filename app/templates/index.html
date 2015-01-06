@@ -29,11 +29,12 @@
 
     </div>
 
-    <!-- End of ad  -->
+    <!-- Pagination  -->
+
     <nav>
         <ul class="pagination">
             <li data-ng-repeat="page in pages(ads.numPages)">
-                <a href="http://softuni-ads.azurewebsites.net/api/Ads?PageSize=5&StartPage={{page}}">{{page}}</a>
+                <button class="btn-default btn-sm" data-ng-click="reloadAds(categoryId,townId,page)">{{page}}</button>
             </li>
         </ul>
     </nav>
@@ -46,22 +47,20 @@
     <div class="wrapper">
         <h3 class="text-center"><strong>Categories</strong></h3>
         <hr/>
-        <ul class="list-unstyled">
-            <li class="selected"><a href="">All</a></li>
-            <li data-ng-repeat="category in categories"><a href="">{{category.name}}</a></li>
-        </ul>
+        <select data-ng-model="categoryId">
+            <option class="selected" value="">All</option>
+            <option data-ng-repeat="category in categories" value="{{category.id}}">{{category.name}}</option>
+        </select>
     </div>
 
     <!-- Second  -->
     <div class="wrapper">
         <h3 class="text-center"><strong>Towns</strong></h3>
         <hr/>
-        <ul class="list-unstyled">
-            <li class="selected"><a href="">All</a></li>
-            <li><a href="">Pleven</a></li>
-            <li><a href="">Sofia</a></li>
-            <li><a href="">Plovdiv</a></li>
-        </ul>
+        <select data-ng-model="townId">
+            <option class="selected" value="">All</option>
+            <option data-ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+        </select>
     </div>
-
+    <button class="btn-default btn-lg" data-ng-click="reloadAds(categoryId,townId,startPage)">Filter</button>
 </div>
