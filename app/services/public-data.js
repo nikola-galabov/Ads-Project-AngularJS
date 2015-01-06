@@ -27,10 +27,15 @@ publicApp.factory('publicData', function publicData($resource) {
         return register.save(user);
     }
 
+    function loginUser(user) {
+        return login.save(user);
+    }
+
     return {
         getAds: getAds,
         getCategories: getCategories,
         getTowns: getTowns,
-        registerUser: registerUser
+        registerUser: registerUser,
+        loginUser:loginUser
     }
 });

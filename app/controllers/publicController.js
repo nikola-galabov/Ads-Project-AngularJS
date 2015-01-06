@@ -1,4 +1,4 @@
-publicApp.controller('PublicController', function PublicController($scope, publicData) {
+publicApp.controller('PublicController', function PublicController($scope, $cookieStore, $location, publicData) {
     $scope.ads = publicData.getAds();
     $scope.categories = publicData.getCategories();
     $scope.towns = publicData.getTowns();
@@ -20,7 +20,7 @@ publicApp.controller('PublicController', function PublicController($scope, publi
         $scope.ads = publicData.getAds(townid,categoryid,startPage);
     }
 
-    $scope.user = {
+    $scope.userReg = {
         username:'',
         password:'',
         confirmPassword:'',
@@ -29,12 +29,15 @@ publicApp.controller('PublicController', function PublicController($scope, publi
         townId:'',
         phone:''
     }
+
     $scope.alertShow = false;
+
+
     $scope.register = function() {
-         publicData.registerUser($scope.user)
+         publicData.registerUser($scope.userReg)
             .$promise.then(
                 function( value ){
-                    $scope.user = value;
+                    $cookieStore.put('auth', value.access_token);
                     $scope.alert = { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
                 },
 
@@ -43,4 +46,21 @@ publicApp.controller('PublicController', function PublicController($scope, publi
                 }).then($scope.alertShow=true);
     }
 
+    $scope.userLogin = {
+        username:'',
+        password:''
+    }
+
+    $scope.loginUser = function() {
+        $scope.userLogin = publicData.loginUser($scope.userLogin)
+            .$promise.then(
+            function( value ){
+                $cookieStore.put('auth', value.access_token);
+                $scope.alert = { type: 'success', msg: 'Successful logged!' }
+            },
+
+            function( error ){
+                $scope.alert = { type: 'danger', msg: 'Something went wrong!' };
+            }).then($scope.alertShow=true);
+    }
 });

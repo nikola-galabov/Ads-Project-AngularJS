@@ -1,22 +1,30 @@
 <div class="col-md-10 container container-fluid">
 	
-	<form class="form wrapper container-fluid col-md-4 col-md-offset-4">
+	<form name="login" class="form wrapper container-fluid col-md-4 col-md-offset-4" novalidate>
 		<h3 class="text-center"><strong>Login</strong></h3>
 		<hr />
 
 		<div class="form-group">
 			<label for="username">Username:</label>
-			<input class="form-control" id="username" type="text" required />
+			<input class="form-control" id="username" name="username" type="text" data-ng-model="userLogin.username" required />
+            <span class="validation-error" ng-show="login.username.$touched && (login.username.$dirty || login.username.$invalid)">
+                <span ng-show="login.username.$error.required">Required.</span>
+            </span>
 		</div>
 
 		<div class="form-group">
 			<label for="password">Password:</label>
-			<input class="form-control" id="password" type="password" required />
+			<input class="form-control" id="password" minlength="2" maxlength="100" name="password" type="password" data-ng-model="userLogin.password" required />
+            <span class="validation-error" ng-show="login.password.$touched && (login.password.$dirty || login.password.$invalid)">
+                <span ng-show="login.password.$error.required">Required.</span>
+                <span ng-show="login.password.$error.minlength || login.password.$error.maxlength">Password must be in range [2;100]</span>
+            </span>
 		</div>
 
 		<div class="form-group">
-			<a href="#" class="pull-left btn btn-default">Login</a>
+			<button data-ng-click="loginUser()" class="pull-left btn btn-default">Login</button>
 			<a href="#/register" class="pull-right">Register here</a>
 		</div>
 	</form>
+    {{userLogin}}
 </div>

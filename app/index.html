@@ -14,7 +14,7 @@
     <a href="#/myAds">my ads</a>
     <a href="#/editProfile">edit Profile</a>
 </header>
-
+<div data-ng-show="alertShow" alert type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</div>
 <!-- Login section -->
 <div class="container col-md-2">
     <div class="wrapper">
@@ -35,6 +35,7 @@
 <script type="text/javascript" src="libs/angular.js"></script>
 <script type="text/javascript" src="libs/angular-route.js"></script>
 <script type="text/javascript" src="libs/angular-resource.js"></script>
+<script src="libs/angular-cookies.js"></script>
 <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
 <script type="text/javascript" src="modules/publicApp.js"></script>
 <script type="text/javascript" src="directives/compareTo.js"></script>
