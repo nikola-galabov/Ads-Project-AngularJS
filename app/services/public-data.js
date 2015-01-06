@@ -1,7 +1,12 @@
+var BASE_URL = 'http://softuni-ads.azurewebsites.net/api';
+var PAGE_SIZE = 10;
+
 publicApp.factory('publicData', function publicData($resource) {
-    var ads = $resource('http://softuni-ads.azurewebsites.net/api/ads?PageSize=3');
-    var categories = $resource('http://softuni-ads.azurewebsites.net/api/categories');
-    var towns = $resource('http://softuni-ads.azurewebsites.net/api/towns');
+    var ads = $resource(BASE_URL + '/ads?PageSize=' + PAGE_SIZE);
+    var categories = $resource(BASE_URL + '/categories');
+    var towns = $resource(BASE_URL + '/towns');
+    var register = $resource(BASE_URL + '/user/register');
+    var login = $resource(BASE_URL + '/user/login');
 
     function getAds(categoryId,townId,page) {
         if(page == null) {
@@ -18,9 +23,14 @@ publicApp.factory('publicData', function publicData($resource) {
         return towns.query();
     }
 
+    function registerUser(user) {
+        return register.save(user);
+    }
+
     return {
         getAds: getAds,
         getCategories: getCategories,
-        getTowns: getTowns
+        getTowns: getTowns,
+        registerUser: registerUser
     }
 });

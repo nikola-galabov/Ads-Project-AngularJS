@@ -5,6 +5,7 @@ publicApp.controller('PublicController', function PublicController($scope, publi
     $scope.townsId = null;
     $scope.categoryId = null;
     $scope.startPage = 1;
+
     $scope.pages = function (pages) {
         var result = [];
         for (var i = 0; i < pages; i++) {
@@ -19,5 +20,18 @@ publicApp.controller('PublicController', function PublicController($scope, publi
         $scope.ads = publicData.getAds(townid,categoryid,startPage);
     }
 
+    $scope.user = {
+        username:'',
+        password:'',
+        confirmPassword:'',
+        name:'',
+        email:'',
+        townId:'',
+        phone:''
+    }
+
+    $scope.register = function() {
+        return $scope.user = publicData.registerUser($scope.user);
+    }
 
 });
