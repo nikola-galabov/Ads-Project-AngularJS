@@ -1,6 +1,6 @@
-<div class="col-md-10 container">
+<div class="col-md-10 container" data-ng-controller="UserController">
 	
-	<form class="container-fluid form wrapper col-md-10 col-md-offset-1">
+	<form name="publishAd" class="container-fluid form wrapper col-md-10 col-md-offset-1">
 		<div class="row">
 			<div class="col-md-6">
 				<div class="row">
@@ -9,7 +9,7 @@
 					</div>
 
 					<div class="col-md-8">
-						<input class="form-control" id="title" type="text">
+						<input class="form-control" id="title" name="title" type="text" data-ng-model="ad.title" required>
 					</div>
 					
 				</div>
@@ -20,7 +20,7 @@
 					</div>
 
 					<div class="col-md-8">
-						<textarea class="form-control" id="text" ></textarea>
+						<textarea class="form-control" name="text" id="text" data-ng-model="ad.text" required></textarea>
 					</div>
 				</div>
 			</div>
@@ -62,8 +62,7 @@
 
 					<div class="col-md-10">
 						<select class="form-control" id="category">
-							<option>1</option>
-							<option>2</option>
+                            <option data-ng-repeat="category in categories" value="{{category.id}}">{{category.name}}</option>
 						</select>
 					</div>
 					
@@ -82,8 +81,7 @@
 
 					<div class="col-md-10">
 						<select class="form-control" id="town">
-							<option>1</option>
-							<option>2</option>
+                            <option data-ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
 						</select>
 					</div>
 					
@@ -91,9 +89,10 @@
 			</div>
 		</div>
 		<div class="col-md-6 col-md-offset-3">
-			<a href="#" class="btn btn-default">Punlish</a>
-			<a href="#/" class="btn btn-default">Cancel</a>
+			<button data-ng-click="publishTheAd()" class="btn btn-default">Publish</button>
+			<a href="#/user/ads" class="btn btn-default">Cancel</a>
 		</div>
 		
 	</form>
+    {{ad}}
 </div>

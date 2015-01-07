@@ -8,7 +8,7 @@
 
 <!-- Header -->
 <header class="nav">
-    <h1>Ads - Home</h1> <span data-ng-show="user">{{user.username}} <button data-ng-click="logout()">Logout</button>
+    <h1>Ads - Home</h1> <span data-ng-show="user">{{user.username}} <button data-ng-click="logout()">Logout</button> </span>
 </header>
 
 <!-- Alerts -->
@@ -21,8 +21,8 @@
         <hr/>
         <ul class="list-unstyled">
             <li><a href="#/">Home</a> </li>
-            <li data-ng-show="user"><a href="">My ads</a></li>
-            <li data-ng-show="user"><a href="">Publish new ad</a></li>
+            <li data-ng-show="user"><a href="#/user/ads">My ads</a></li>
+            <li data-ng-show="user"><a href="#/user/ads/publish">Publish new ad</a></li>
             <li data-ng-show="user"><a href="">Edit profile</a></li>
         </ul>
     </div>
@@ -51,6 +51,8 @@
 <script type="text/javascript" src="modules/publicApp.js"></script>
 <script type="text/javascript" src="directives/compareTo.js"></script>
 <script type="text/javascript" src="services/public-data.js"></script>
+<script type="text/javascript" src="services/user-data.js"></script>
 <script type="text/javascript" src="controllers/publicController.js"></script>
+<script src="controllers/userController.js"></script>
 </body>
 </html>

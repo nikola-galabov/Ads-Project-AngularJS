@@ -10,4 +10,11 @@ publicApp.config(function ($routeProvider) {
 	$routeProvider.when('/',{
 		templateUrl: 'templates/index.html'
 	});
+    $routeProvider.when('/user/ads',{
+        templateUrl: 'templates/my-ads.html'
+    });
+    $routeProvider.when('/user/ads/publish',{
+        templateUrl: 'templates/publish-ad.html'
+    });
+
 });
