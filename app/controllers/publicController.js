@@ -1,10 +1,13 @@
-publicApp.controller('PublicController', function PublicController($scope, $cookieStore, $location, publicData) {
+publicApp.controller('PublicController', function PublicController($scope, $cookieStore, $location, $timeout, publicData) {
     $scope.ads = publicData.getAds();
     $scope.categories = publicData.getCategories();
     $scope.towns = publicData.getTowns();
     $scope.townsId = null;
     $scope.categoryId = null;
     $scope.startPage = 1;
+
+    $scope.user = $cookieStore.get('user');
+
 
     $scope.pages = function (pages) {
         var result = [];
@@ -32,18 +35,23 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
 
     $scope.alertShow = false;
 
-
     $scope.register = function() {
          publicData.registerUser($scope.userReg)
             .$promise.then(
                 function( value ){
-                    $cookieStore.put('auth', value.access_token);
-                    $scope.alert = { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
+                    $cookieStore.put('user', value);
+                    $scope.alert = { type: 'success', msg: 'Successful registration!' };
+                    $location.path('/');
+                    $scope.user = $cookieStore.get('user');
                 },
-
-                function( error ){
-                    $scope.alert = { type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' };
-                }).then($scope.alertShow=true);
+                 function( error ){
+                     console.log(error)
+                     $scope.alert = { type: 'danger', msg: error.data.message };
+                 }).then(
+                 function() {
+                     $scope.alertShow=true;
+                     $timeout(closeAlert, 5000);
+                 });
     }
 
     $scope.userLogin = {
@@ -55,12 +63,29 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
         $scope.userLogin = publicData.loginUser($scope.userLogin)
             .$promise.then(
             function( value ){
-                $cookieStore.put('auth', value.access_token);
-                $scope.alert = { type: 'success', msg: 'Successful logged!' }
+                $cookieStore.put('user', value);
+                $scope.alert = { type: 'success', msg: 'Successful logged!' };
+                $location.path('/');
+                $scope.user = $cookieStore.get('user');
             },
-
             function( error ){
-                $scope.alert = { type: 'danger', msg: 'Something went wrong!' };
-            }).then($scope.alertShow=true);
+                $scope.alert = { type: 'danger', msg: error.data.error_description };
+            }).then(
+                function() {
+                    $scope.alertShow=true;
+                    $timeout(closeAlert, 5000);
+                });
+    }
+
+    $scope.logout = function() {
+        $cookieStore.remove('user');
+        $scope.user = $cookieStore.get('user');
+        $location.path('/');
+    }
+
+    $scope.closeAlert = closeAlert;
+
+    function closeAlert() {
+        $scope.alertShow=false;
     }
 });

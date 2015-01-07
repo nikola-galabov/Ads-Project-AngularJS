@@ -22,9 +22,8 @@
 		</div>
 
 		<div class="form-group">
-			<button data-ng-click="loginUser()" class="pull-left btn btn-default">Login</button>
+			<button data-ng-click="loginUser()" ng-disabled="!login.$valid" class="pull-left btn btn-default">Login</button>
 			<a href="#/register" class="pull-right">Register here</a>
 		</div>
 	</form>
-    {{userLogin}}
 </div>

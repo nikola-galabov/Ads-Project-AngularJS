@@ -8,21 +8,32 @@
 
 <!-- Header -->
 <header class="nav">
-    <h1>Ads - Home</h1>
-    <a href="#/">Home</a>
-    <a href="#/newAd">new ad</a>
-    <a href="#/myAds">my ads</a>
-    <a href="#/editProfile">edit Profile</a>
+    <h1>Ads - Home</h1> <span data-ng-show="user">{{user.username}} <button data-ng-click="logout()">Logout</button>
 </header>
-<div data-ng-show="alertShow" alert type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</div>
-<!-- Login section -->
+
+<!-- Alerts -->
+<div data-ng-show="alertShow" data-ng-hide="!alertShow" data-ng-animate="'animate'" alert type="{{alert.type}}" close="closeAlert()">{{alert.msg}}</div>
+
+<!-- Left sidebar -->
 <div class="container col-md-2">
     <div class="wrapper">
+        <h3 class="text-center"><strong>Navigation</strong></h3>
+        <hr/>
+        <ul class="list-unstyled">
+            <li><a href="#/">Home</a> </li>
+            <li data-ng-show="user"><a href="">My ads</a></li>
+            <li data-ng-show="user"><a href="">Publish new ad</a></li>
+            <li data-ng-show="user"><a href="">Edit profile</a></li>
+        </ul>
+    </div>
+
+    <div data-ng-hide="user" class="wrapper">
         <h3 class="text-center">To publish a new ad, please login</h3>
         <a href="#/login" class="btn btn-default btn-lg">Login</a>
         <a href="#/register" class="btn btn-default btn-lg">Register</a>
     </div>
 </div>
+
 
 <div data-ng-view>
 

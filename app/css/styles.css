@@ -50,7 +50,7 @@ ul li {
     margin-bottom: 5px;
 }
 
-ul li.selected {
+.selected{
     background-color: #DAA600;
     border: 1px solid #7F6000;
 }
@@ -132,6 +132,16 @@ input.ng-invalid.ng-touched {
 
 input.ng-valid.ng-touched {
     background-color: #78FA89;
+}
+
+.animate-enter {
+    -webkit-transition: 1s linear all; /* Chrome */
+    transition: 2s linear all;
+    opacity: 0;
+}
+
+.animate-enter.animate-enter-active {
+    opacity: 1;
 }
 
 footer {
