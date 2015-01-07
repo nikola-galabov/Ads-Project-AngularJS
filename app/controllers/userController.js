@@ -29,4 +29,6 @@ publicApp.controller('UserController',function($scope, $location, $timeout, user
         $scope.alertShow=false;
     }
 
+    $scope.$location = $location;
+
 });

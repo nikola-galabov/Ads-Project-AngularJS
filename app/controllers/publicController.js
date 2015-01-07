@@ -88,4 +88,6 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
     function closeAlert() {
         $scope.alertShow=false;
     }
+
+    $scope.$location = $location;
 });

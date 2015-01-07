@@ -80,7 +80,7 @@
 					</div>
 
 					<div class="col-md-10">
-						<select class="form-control" id="town" data-ng-model="ad.categoryId">
+						<select class="form-control" id="town" data-ng-model="ad.townId">
                             <option data-ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
 						</select>
 					</div>
@@ -92,6 +92,6 @@
 			<button data-ng-click="publishTheAd()" class="btn btn-default">Publish</button>
 			<a href="#/user/ads" class="btn btn-default">Cancel</a>
 		</div>
-		
+
 	</form>
 </div>
