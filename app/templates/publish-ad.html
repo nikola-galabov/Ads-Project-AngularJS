@@ -26,7 +26,7 @@
 			</div>
 
 			<div class="col-md-6">
-				<img class="img-responsive" src="http://media.caranddriver.com/images/media/51/dissected-lotus-based-infiniti-emerg-e-sports-car-concept-top-image-photo-451994-s-original.jpg">
+				<img class="img-responsive" data-ng-src="{{ad.imageDataUrl}}">
 			</div>
 		</div>
 
@@ -40,14 +40,14 @@
 					</div>
 
 					<div class="col-md-8">
-						<input class="form-control" id="image-url" type="url">
+						<input class="form-control" data-ng-model="ad.imageDataUrl" id="image-url" type="text">
 					</div>
 					
 				</div>
 			</div>
 
 			<div class="col-md-6">
-				<input type="file"/>
+                <input type="file" accept="image/png,image/jpeg,image/webp" ng-file ng-model="ad.imageDataUrl" ng-format="image/jpeg">
 			</div>
 		</div>
 		
@@ -61,7 +61,7 @@
 					</div>
 
 					<div class="col-md-10">
-						<select class="form-control" id="category">
+						<select data-ng-model="ad.categoryId" class="form-control" id="category">
                             <option data-ng-repeat="category in categories" value="{{category.id}}">{{category.name}}</option>
 						</select>
 					</div>
@@ -80,7 +80,7 @@
 					</div>
 
 					<div class="col-md-10">
-						<select class="form-control" id="town">
+						<select class="form-control" id="town" data-ng-model="ad.categoryId">
                             <option data-ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
 						</select>
 					</div>
@@ -94,5 +94,4 @@
 		</div>
 		
 	</form>
-    {{ad}}
 </div>

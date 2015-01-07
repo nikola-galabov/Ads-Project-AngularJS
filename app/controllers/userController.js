@@ -3,7 +3,7 @@ publicApp.controller('UserController',function($scope, $location, $timeout, user
     $scope.ad = {
         title: '',
         text: '',
-        image:'',
+        imageDataUrl:'',
         categoryId:'',
         townId:''
     }

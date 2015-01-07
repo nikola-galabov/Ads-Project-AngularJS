@@ -1,47 +1,46 @@
 <div data-ng-controller="UserController" class="container col-md-10">
 
     <div class="container-fluid row">
-
-        <div class="ad col-md-8">
+{{user}}
+        <div class="ad col-md-12">
             <!-- Start of ad  -->
-            <div class="wrapper container-fluid" data-ng-repeat="ad in ads.ads">
+            <div class="wrapper col-md-12 container-fluid" data-ng-repeat="ad in ads.ads">
+                <div class="col-md-8">
+                    <div class="clearfix container-fluid">
+                        <h2 class="pull-left"><strong>{{ad.title}}</strong></h2>
 
-                <div class="clearfix container-fluid">
-                    <h2 class="pull-left"><strong>{{ad.title}}</strong></h2>
-
-                    <h2 class="pull-right">{{ad.date | date:'dd MMM yyyy'}}</h2>
-                </div>
-
-                <div>
-                    <div class="col-md-4 box">
-                        <img class="img-responsive" data-ng-src="{{ad.imageDataUrl}}">
+                        <h2 class="pull-right">{{ad.date | date:'dd MMM yyyy'}}</h2>
                     </div>
 
-                    <div class="col-md-8">
-                        <div class="box fluid-container data-container">{{ad.text}}</div>
-                        <div class="fluid-container data-container"><span class="col-md-2 text-right">Name:</span> <span
-                                class="box col-md-10">{{ad.ownerName}}</span></div>
-                        <div class="fluid-container data-container"><span
-                                class="col-md-2 text-right">Email:</span> <span
-                                class="box col-md-10">{{ad.ownerEmail}}</span></div>
-                        <div class="fluid-container data-container"><span class="col-md-2 text-right">Tel:</span> <span
-                                class="box col-md-10">{{ad.ownerPhone}}</span></div>
+                    <div>
+                        <div class="col-md-4 box">
+                            <img class="img-responsive" data-ng-src="{{ad.imageDataUrl}}">
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="box fluid-container data-container">{{ad.text}}</div>
+                            <div class="fluid-container data-container"><span class="col-md-2 text-right">Category:</span> <span
+                                    class="box col-md-10">{{ad.categoryName}}</span></div>
+                            <div class="fluid-container data-container">
+                                <span class="col-md-2 text-right">Town:</span>
+                                <span class="box col-md-10">{{ad.townName}}</span>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
+                <div class="col-md-4 my-ad-btn-wrapper">
+                    <div class="btns-container">
+                        <h3>Status:</h3>
 
+                        <div class="box">Inactive</div>
+                        <a href="#" class="btn btn-default btn-lg">Edit</a>
+                        <a href="#" class="btn btn-default btn-lg">Publish again</a>
+                        <a href="#/deleteAd" class="btn btn-default btn-lg">Delete</a>
+                    </div>
+                </div>
             </div>
             <!-- End of ad  -->
-        </div>
-
-        <div class="col-md-4 wrapper my-ad-btn-wrapper">
-            <div class="btns-container">
-                <h3>Status:</h3>
-
-                <div class="box">Inactive</div>
-                <a href="#" class="btn btn-default btn-lg">Edit</a>
-                <a href="#" class="btn btn-default btn-lg">Publish again</a>
-                <a href="#/deleteAd" class="btn btn-default btn-lg">Delete</a>
-            </div>
         </div>
     </div>
 

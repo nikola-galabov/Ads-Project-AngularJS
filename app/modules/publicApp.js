@@ -1,4 +1,4 @@
-var publicApp = angular.module('publicApp',['ngRoute', 'ngResource','ui.bootstrap','ngCookies']);
+var publicApp = angular.module('publicApp',['ngRoute', 'ngResource','ui.bootstrap','ngCookies', 'file-data-url']);
 
 publicApp.config(function ($routeProvider) {
 	$routeProvider.when('/login',{
