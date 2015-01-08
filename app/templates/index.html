@@ -45,20 +45,20 @@
 
     <!-- First  -->
     <div class="wrapper">
-        <h3 class="text-center"><strong>Categories</strong></h3>
+        <label for="categories" class="text-center"><strong>Categories</strong></label>
         <hr/>
-        <select data-ng-model="categoryId">
-            <option class="selected" value="">All</option>
+        <select name="towns" class="form-control" id="categories" data-ng-model="categoryId">
+
             <option data-ng-repeat="category in categories" value="{{category.id}}">{{category.name}}</option>
         </select>
     </div>
 
     <!-- Second  -->
     <div class="wrapper">
-        <h3 class="text-center"><strong>Towns</strong></h3>
+        <label for="towns" class="text-center"><strong><h3>Towns</h3></strong></label>
         <hr/>
-        <select data-ng-model="townId">
-            <option class="selected" value="">All</option>
+        <select name="towns" id="towns" class="form-control" data-ng-model="townId">
+            
             <option data-ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
         </select>
     </div>

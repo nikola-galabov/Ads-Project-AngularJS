@@ -1,5 +1,5 @@
 <div class="col-md-10 container">
-	<form class="container-fluid form wrapper col-md-10 col-md-offset-1" novalidate name="registration">
+	<form class="validated-form container-fluid form wrapper col-md-10 col-md-offset-1" novalidate name="registration">
 		<h3 class="text-center"><strong>User Registration</strong></h3>
 		<hr />
 
@@ -56,7 +56,9 @@
 
 		<div class="form-group form-group-small">
 			<label for="town">Town:</label>
-			<input class="form-control" id="town" type="text" data-ng-model="userReg.townId" />
+            <select class="form-control" id="town" data-ng-model="userReg.townId">
+                <option data-ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+            </select>
 		</div>
         
 		<div class="form-group">

@@ -118,11 +118,12 @@ form div.row {
     color:gray;
 }
 
-input.ng-invalid.ng-touched {
+.validated-form .ng-invalid.ng-touched {
     background-color: #FA787E;
 }
 
-.validation-error {
+
+.validated-form .validation-error {
     background-color: red;
     color: #ffffff;
     padding: 0 15px;
@@ -130,18 +131,8 @@ input.ng-invalid.ng-touched {
     border-radius: 7px;
 }
 
-input.ng-valid.ng-touched {
+.validated-form .ng-valid.ng-touched {
     background-color: #78FA89;
-}
-
-.animate-enter {
-    -webkit-transition: 1s linear all; /* Chrome */
-    transition: 2s linear all;
-    opacity: 0;
-}
-
-.animate-enter.animate-enter-active {
-    opacity: 1;
 }
 
 footer {
