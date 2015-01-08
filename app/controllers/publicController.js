@@ -41,7 +41,7 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
                 function( value ){
                     $cookieStore.put('user', value);
                     $scope.alert = { type: 'success', msg: 'Successful registration!' };
-                    $location.path('/');
+                    $location.path('/user/home');
                     $scope.user = $cookieStore.get('user');
                 },
                  function( error ){
@@ -65,7 +65,7 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
             function( value ){
                 $cookieStore.put('user', value);
                 $scope.alert = { type: 'success', msg: 'Successful logged!' };
-                $location.path('/');
+                $location.path('/user/home');
                 $scope.user = $cookieStore.get('user');
             },
             function( error ){

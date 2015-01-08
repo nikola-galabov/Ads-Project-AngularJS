@@ -16,7 +16,6 @@
             <div class="wrapper col-md-12 container-fluid text-center" data-ng-if="userAds.ads.length==0">
                 There are no ads!
             </div>
-            {{ad}}
             <div class="wrapper col-md-12 container-fluid" data-ng-repeat="ad in userAds.ads">
                 <div class="col-md-8">
                     <div class="clearfix container-fluid">
@@ -50,9 +49,10 @@
                         <h3>Status:</h3>
 
                         <div class="box">{{ad.status}}</div>
-                        <button data-ng-click="editAdd(ad.id)" class="btn btn-default btn-lg">Edit</button>
-                        <a href="#" class="btn btn-default btn-lg">Publish again</a>
-                        <a href="#/user/ads/delete/{{ad.id}}" class="btn btn-default btn-lg">Delete</a>
+                        <a data-ng-show="ad.status=='Inactive'" href="#/user/ads/edit/{{ad.id}}" class="btn btn-default btn-lg">Edit</a>
+                        <button data-ng-show="ad.status=='Published'||ad.status=='WaitingApproval'" data-ng-click="deactivateAd(ad.id)" class="btn btn-default btn-lg">Deactivate</button>
+                        <button data-ng-show="ad.status=='Inactive'" data-ng-click="publishAgainAd(ad.id)" class="btn btn-default btn-lg">Publish again</button>
+                        <a data-ng-show="ad.status=='Inactive'" href="#/user/ads/delete/{{ad.id}}" class="btn btn-default btn-lg">Delete</a>
                     </div>
                 </div>
             </div>

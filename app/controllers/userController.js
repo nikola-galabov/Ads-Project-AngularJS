@@ -28,6 +28,30 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
             })
     }
 
+    $scope.publishAgainAd = function(id){
+        userData.publishAgainAd(id).$promise.
+        then(
+            function(){
+
+            },
+            function(){
+
+            }
+        );
+    }
+
+    $scope.deactivateAd = function(id){
+        userData.deactivateAd(id).$promise.
+        then(
+            function(){
+
+            },
+            function(){
+
+            }
+        );
+    }
+
     $scope.reloadUserAds = function(status, page) {
         switch (status) {
             case 'Inactive' : status = 0; break;

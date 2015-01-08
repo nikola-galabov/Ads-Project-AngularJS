@@ -16,6 +16,24 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
 		    }
 	});
 
+    var deactivateAdRes = $resource(
+        'http://softuni-ads.azurewebsites.net/api/user/ads/deactivate/:id',
+        {id: '@id'},
+        {
+            update: {
+                method: 'PUT'
+            }
+        });
+
+    var publishAgainRes = $resource(
+        'http://softuni-ads.azurewebsites.net/api/user/ads/PublishAgain/:id',
+        {id: '@id'},
+        {
+            update: {
+                method: 'PUT'
+            }
+        });
+
 	function getUserAds(status,page) {
         if(page == null) {
             page = 1;
@@ -44,11 +62,23 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
 		return resource.delete({id: id});
 	}
 
+    function publishAgainAd(id) {
+        getHeaders();
+        return publishAgainRes.update({id: id});
+    }
+
+    function deactivateAd(id) {
+        getHeaders();
+        return deactivateAdRes.update({id: id});
+    }
+
 	return {
         getUserAds: getUserAds,
 		createAd: createNewAd,
 		getAdById: getAdById,
 		editAd: editAd,
-		deleteAd: deleteAd
+		deleteAd: deleteAd,
+        deactivateAd:deactivateAd,
+        publishAgainAd: publishAgainAd
 	}
 });

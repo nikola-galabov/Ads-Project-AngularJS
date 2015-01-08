@@ -8,8 +8,13 @@ publicApp.config(function ($routeProvider) {
 		templateUrl: 'templates/register.html'
 	});
 	$routeProvider.when('/',{
-		templateUrl: 'templates/index.html'
+		templateUrl: 'templates/index.html',
+        controller: 'PublicController'
 	});
+    $routeProvider.when('/user/home',{
+        templateUrl: 'templates/index.html',
+        controller: 'UserController'
+    });
     $routeProvider.when('/user/ads',{
         templateUrl: 'templates/my-ads.html',
         controller: 'UserController'
@@ -18,6 +23,14 @@ publicApp.config(function ($routeProvider) {
         templateUrl: 'templates/publish-ad.html'
     });
     $routeProvider.when('/user/ads/delete/:id',{
-        templateUrl: 'templates/delete-ad.html'
+        templateUrl: 'templates/delete-ad.html',
+        controller: 'DeleteAdController'
+    });
+    $routeProvider.when('/user/ads/edit/:id',{
+        templateUrl: 'templates/edit-ad.html',
+        controller: 'EditAdController'
+    });
+    $routeProvider.when('/user/profile',{
+        templateUrl: 'templates/edit-profile.html'
     });
 });

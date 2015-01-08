@@ -1,4 +1,4 @@
-publicApp.controller('DeleteAdController', function($scope, $location, userData){
+publicApp.controller('EditAdController', function($scope, $location, userData){
     var id = $location.path().split('/');
     id = id[id.length-1];
 
@@ -12,9 +12,18 @@ publicApp.controller('DeleteAdController', function($scope, $location, userData)
         }
     );
 
-    $scope.deleteAd = function() {
-        userData.deleteAd(id).$promise
-        .then(
+    $scope.deleteImage = function() {
+        $scope.ad['changeimage']=true;
+        $scope.ad.imageDataUrl=null;
+    }
+
+    $scope.changeImage = function() {
+        $scope.ad['changeimage']=true;
+    }
+
+    $scope.updateTheAd = function(ad) {
+        userData.editAd(id, ad).$promise
+            .then(
             function() {
                 $location.path('/user/ads');
             },
@@ -23,4 +32,4 @@ publicApp.controller('DeleteAdController', function($scope, $location, userData)
             }
         )
     }
-})
+});

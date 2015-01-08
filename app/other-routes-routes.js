@@ -19,7 +19,4 @@ app.config(function ($routeProvider) {
     $routeProvider.when('/deleteAd',{
         templateUrl: 'templates/delete-ad.html'
     });
-    $routeProvider.when('/editProfile',{
-        templateUrl: 'templates/edit-profile.html'
-    });
 });

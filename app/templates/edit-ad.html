@@ -1,0 +1,107 @@
+<div class="col-md-10 container" data-ng-controller="EditAdController">
+{{ad}}
+    <form name="editAd" class="validated-form container-fluid form wrapper col-md-10 col-md-offset-1">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="text-right col-md-4">
+                        <label for="title">Title:</label>
+                    </div>
+
+                    <div class="col-md-8">
+                        <input class="form-control" id="title" name="title" type="text" data-ng-model="ad.title" required>
+                    </div>
+					<span class="validation-error" data-ng-show="editAd.title.$touched && (editAd.title.$dirty || editAd.title.$invalid)">
+                        <span data-ng-show="editAd.title.$error.required">Required.</span>
+                    </span>
+                </div>
+
+                <div class="row">
+                    <div class="text-right col-md-4">
+                        <label for="text">Text:</label>
+                    </div>
+
+                    <div class="col-md-8">
+                        <textarea class="form-control" name="text" id="text" data-ng-model="ad.text" required></textarea>
+                    </div>
+                    <span class="validation-error" data-ng-show="editAd.text.$touched && (editAd.text.$dirty || editAd.text.$invalid)">
+                        <span data-ng-show="editAd.text.$error.required">Required.</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <img src="" class="img-responsive" data-ng-src="{{ad.imageDataUrl}}" alt="{{ad.title}}">
+            </div>
+        </div>
+
+        <!--SECOND ROW-->
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="text-right col-md-4">
+                        <label for="image-url">Image:</label>
+                    </div>
+
+                    <div class="col-md-8">
+                        <input class="form-control" name="imageDataUrl" data-ng-trim="false" data-ng-pattern="/^data:image/.*$/" data-ng-model="ad.imageDataUrl" id="image-url" type="text">
+                        <span class="validation-error" data-ng-show="editAd.imageDataUrl.$touched && editAd.imageDataUrl.$invalid">
+                            <span data-ng-show="(editAd.imageDataUrl.$error.pattern)">You can only put a data url here!</span>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <input type="file" accept="image/png,image/jpeg,image/webp" data-ng-file data-ng-model="ad.imageDataUrl" data-ng-format="image/jpeg">
+            </div>
+            <button class="col-md-6 btn-default" data-ng-click="deleteImage()">Delete image</button>
+            <button class="col-md-6 btn-default" data-ng-click="changeImage()">Change image</button>
+        </div>
+
+        <!--THIRD ROW-->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="text-right col-md-2">
+                        <label for="category">Category:</label>
+                    </div>
+
+                    <div class="col-md-10">
+                        <select data-ng-model="ad.categoryId" class="form-control" id="category">
+                            <option data-ng-repeat="category in categories" value="{{category.id}}">{{category.name}}</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--FOURTH ROW-->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="text-right col-md-2">
+                        <label for="town">Town:</label>
+                    </div>
+
+                    <div class="col-md-10">
+                        <select class="form-control" id="town" data-ng-model="ad.townId">
+                            <option data-ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <button data-ng-click="updateTheAd(ad)" data-ng-disabled="!editAd.$valid" class="btn btn-default">Update</button>
+            <a href="#/user/ads" class="btn btn-default">Cancel</a>
+        </div>
+
+    </form>
+</div>
