@@ -1,5 +1,6 @@
 publicApp.controller('UserController',function($scope, $location, $timeout, userData){
     $scope.ads = userData.getUserAds();
+
     $scope.ad = {
         title: '',
         text: '',

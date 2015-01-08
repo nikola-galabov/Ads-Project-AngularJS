@@ -90,4 +90,5 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
     }
 
     $scope.$location = $location;
+
 });
