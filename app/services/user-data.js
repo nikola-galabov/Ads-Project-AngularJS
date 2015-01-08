@@ -34,6 +34,22 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
             }
         });
 
+    var profile = $resource(
+        'http://softuni-ads.azurewebsites.net/api/user/profile',{},
+        {
+            update: {
+                method: 'PUT'
+            }
+        });
+
+    var password = $resource(
+        'http://softuni-ads.azurewebsites.net/api/user/changePassword',{},
+        {
+            update: {
+                method: 'PUT'
+            }
+        });
+
 	function getUserAds(status,page) {
         if(page == null) {
             page = 1;
@@ -72,6 +88,21 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
         return deactivateAdRes.update({id: id});
     }
 
+    function getProfile() {
+        getHeaders();
+        return profile.get();
+    }
+
+    function editProfile(profileData) {
+        getHeaders();
+        return profile.update(profileData);
+    }
+
+    function changePassword(data) {
+        getHeaders();
+        return password.update(data);
+    }
+
 	return {
         getUserAds: getUserAds,
 		createAd: createNewAd,
@@ -79,6 +110,9 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
 		editAd: editAd,
 		deleteAd: deleteAd,
         deactivateAd:deactivateAd,
-        publishAgainAd: publishAgainAd
+        publishAgainAd: publishAgainAd,
+        getProfile: getProfile,
+        editProfile: editProfile,
+        changePassword: changePassword
 	}
 });

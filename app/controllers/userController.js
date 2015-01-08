@@ -32,7 +32,7 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
         userData.publishAgainAd(id).$promise.
         then(
             function(){
-
+                $scope.userAds = userData.getUserAds();
             },
             function(){
 
@@ -44,7 +44,7 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
         userData.deactivateAd(id).$promise.
         then(
             function(){
-
+                $scope.userAds = userData.getUserAds();
             },
             function(){
 
