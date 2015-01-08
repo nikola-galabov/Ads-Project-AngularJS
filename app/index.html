@@ -33,17 +33,6 @@
         <a href="#/register" class="btn btn-default btn-lg">Register</a>
     </div>
 
-    <div class="wrapper" data-ng-controller="UserController" data-ng-if="$location.path()=='/user/ads'">
-        <h3 class="text-center"><strong>My ads</strong></h3>
-        <hr/>
-        <ul class="list-unstyled">
-            <li><a href="#/">All</a> </li>
-            <li data-ng-show="user"><a href="#/user/ads">Published</a></li>
-            <li data-ng-show="user"><a href="#/user/ads/publish">Waiting Approval</a></li>
-            <li data-ng-show="user"><a href="">Inactive</a></li>
-            <li data-ng-show="user"><a href="">Rejected</a></li>
-        </ul>
-    </div>
 </div>
 
 

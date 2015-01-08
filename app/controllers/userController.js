@@ -1,5 +1,7 @@
-publicApp.controller('UserController',function($scope, $location, $timeout, userData){
-    $scope.ads = userData.getUserAds();
+publicApp.controller('UserController',function($route, $scope, $location, $timeout, userData){
+    $scope.userAds = userData.getUserAds();
+    $scope.status = 'all';
+    $scope.startPage = 1;
 
     $scope.ad = {
         title: '',
@@ -24,6 +26,22 @@ publicApp.controller('UserController',function($scope, $location, $timeout, user
                 $scope.alertShow=true;
                 $timeout(closeAlert, 5000);
             })
+    }
+
+    $scope.reloadUserAds = function(status, page) {
+        switch (status) {
+            case 'Inactive' : status = 0; break;
+            case 'Waiting Approval' : status = 1; break;
+            case 'Published' : status = 2; break;
+            case 'Rejected' : status = 3; break;
+            default : status = null;
+        }
+        userData.getUserAds(status, page).$promise
+            .then(
+                function(val){
+                    return $scope.userAds=val;
+                }
+            );
     }
 
     function closeAlert() {

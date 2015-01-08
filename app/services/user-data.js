@@ -1,3 +1,4 @@
+var PAGE_SIZE = 10;
 publicApp.factory('userData', function userData($resource, $cookieStore, $http) {
     //var HEADERS = {'Authorization':'Bearer '+$cookieStore.get('user').acces_token};
     function getHeaders() {
@@ -7,7 +8,7 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
     }
 
 	var resource = $resource(
-		'http://softuni-ads.azurewebsites.net/api/user/ads',
+		'http://softuni-ads.azurewebsites.net/api/user/ads?PageSize=' + PAGE_SIZE,
 		{id: '@id'}, 
 		{
             update: {
@@ -15,9 +16,12 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
 		    }
 	});
 
-	function getUserAds() {
+	function getUserAds(status,page) {
+        if(page == null) {
+            page = 1;
+        }
         getHeaders();
-		return resource.get();
+		return resource.get({status: status, startPage: page});
 	}
 
 	function createNewAd(ad) {
