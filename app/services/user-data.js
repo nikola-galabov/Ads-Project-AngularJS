@@ -8,7 +8,7 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
     }
 
 	var resource = $resource(
-		'http://softuni-ads.azurewebsites.net/api/user/ads?PageSize=' + PAGE_SIZE,
+		'http://softuni-ads.azurewebsites.net/api/user/ads/:id?PageSize=' + PAGE_SIZE,
 		{id: '@id'}, 
 		{
             update: {

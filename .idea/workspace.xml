@@ -23,19 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="101" selection-start="9380" selection-end="9380" vertical-scroll-proportion="0.7828467" vertical-offset="659" max-vertical-offset="1207">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user-data.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/services/user-data.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="43" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+            <state line="17" column="0" selection-start="7474" selection-end="7474" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="1207">
               <folding />
             </state>
           </provider>
@@ -44,7 +35,25 @@
       <file leaf-file-name="userController.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/userController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="31" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="986">
+            <state line="50" column="33" selection-start="1492" selection-end="1492" vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="986">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deleteAdController.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/deleteAdController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="14" selection-start="444" selection-end="444" vertical-scroll-proportion="0.4923339" vertical-offset="0" max-vertical-offset="587">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="delete-ad.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/delete-ad.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="31" selection-start="7973" selection-end="7973" vertical-scroll-proportion="-14.538462" vertical-offset="13" max-vertical-offset="561">
               <folding />
             </state>
           </provider>
@@ -53,7 +62,16 @@
       <file leaf-file-name="my-ads.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/my-ads.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="48" selection-start="187" selection-end="187" vertical-scroll-proportion="9.153846" vertical-offset="306" max-vertical-offset="1326">
+            <state line="54" column="44" selection-start="9941" selection-end="9941" vertical-scroll-proportion="-7.8461537" vertical-offset="714" max-vertical-offset="1343">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="publicApp.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/modules/publicApp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="7" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
               <folding />
             </state>
           </provider>
@@ -62,7 +80,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="23" selection-start="687" selection-end="687" vertical-scroll-proportion="-2.1153846" vertical-offset="251" max-vertical-offset="1105">
+            <state line="55" column="67" selection-start="2240" selection-end="2240" vertical-scroll-proportion="-13.884615" vertical-offset="574" max-vertical-offset="1122">
               <folding />
             </state>
           </provider>
@@ -90,13 +108,16 @@
         <option value="$PROJECT_DIR$/app/libs/angular-data-url.js" />
         <option value="$PROJECT_DIR$/app/templates/publish-ad.html" />
         <option value="$PROJECT_DIR$/app/services/public-data.js" />
-        <option value="$PROJECT_DIR$/app/services/user-data.js" />
         <option value="$PROJECT_DIR$/app/templates/index.html" />
         <option value="$PROJECT_DIR$/app/controllers/publicController.js" />
         <option value="$PROJECT_DIR$/app/modules/publicApp.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/services/user-data.js" />
         <option value="$PROJECT_DIR$/app/templates/my-ads.html" />
         <option value="$PROJECT_DIR$/app/controllers/userController.js" />
+        <option value="$PROJECT_DIR$/app/controllers/deleteArticleController.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/templates/delete-ad.html" />
+        <option value="$PROJECT_DIR$/app/controllers/deleteAdController.js" />
       </list>
     </option>
   </component>
@@ -181,6 +202,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -436,11 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/other-routes-routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="7" selection-start="372" selection-end="455" vertical-scroll-proportion="0.4040747" vertical-offset="0" max-vertical-offset="589" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="67" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.7381818" vertical-offset="2" max-vertical-offset="578" />
@@ -458,27 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/publicApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="36" selection-start="507" selection-end="507" vertical-scroll-proportion="0.4204947" vertical-offset="0" max-vertical-offset="566">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/user-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="43" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/publicController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="18" selection-start="646" selection-end="646" vertical-scroll-proportion="-0.9693356" vertical-offset="943" max-vertical-offset="1683">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/publish-ad.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="0" selection-start="2543" selection-end="2543" vertical-scroll-proportion="0.7518248" vertical-offset="1186" max-vertical-offset="1734">
@@ -486,30 +517,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/publicController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="23" selection-start="687" selection-end="687" vertical-scroll-proportion="-2.1153846" vertical-offset="251" max-vertical-offset="1105">
+        <state line="22" column="18" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0" vertical-offset="943" max-vertical-offset="1683">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/user-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="60" selection-start="464" selection-end="464" vertical-scroll-proportion="-0.47173145" vertical-offset="437" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/other-routes-routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="7" selection-start="642" selection-end="737" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/my-ads.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="48" selection-start="187" selection-end="187" vertical-scroll-proportion="9.153846" vertical-offset="306" max-vertical-offset="1326">
+        <state line="54" column="44" selection-start="9941" selection-end="9941" vertical-scroll-proportion="-7.8461537" vertical-offset="714" max-vertical-offset="1343">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/userController.js">
+    <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="31" selection-start="1188" selection-end="1188" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="986">
+        <state line="55" column="67" selection-start="2240" selection-end="2240" vertical-scroll-proportion="-13.884615" vertical-offset="574" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/publicApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="7" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="101" selection-start="9380" selection-end="9380" vertical-scroll-proportion="0.7828467" vertical-offset="659" max-vertical-offset="1207">
+        <state line="17" column="0" selection-start="7474" selection-end="7474" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/delete-ad.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="31" selection-start="7973" selection-end="7973" vertical-scroll-proportion="-14.538462" vertical-offset="13" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/userController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="33" selection-start="1492" selection-end="1492" vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/deleteAdController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="14" selection-start="444" selection-end="444" vertical-scroll-proportion="0.4923339" vertical-offset="0" max-vertical-offset="587">
           <folding />
         </state>
       </provider>

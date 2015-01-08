@@ -17,5 +17,7 @@ publicApp.config(function ($routeProvider) {
     $routeProvider.when('/user/ads/publish',{
         templateUrl: 'templates/publish-ad.html'
     });
-
+    $routeProvider.when('/user/ads/delete/:id',{
+        templateUrl: 'templates/delete-ad.html'
+    });
 });
