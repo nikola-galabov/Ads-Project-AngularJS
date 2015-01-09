@@ -17,8 +17,32 @@ adminApp.controller('AdminController',function($scope, adminData){
             return $scope.adminAds = value
         },
         function(error){
-            $scope.$parent.showErrorMessage('An error has been occurred!');
+            $scope.$parent.showErrorMessage('An error has occurred!');
         });
+
+    $scope.approveAd = function(id) {
+        adminData.adminApproveAd(id).$promise
+            .then(
+                function(success){
+                    $scope.$parent.showSuccessMessage('Ad approved successfully!');
+                },
+                function(err){
+                    $scope.$parent.showErrorMessage('An error has occurred!');
+                }
+            )
+    }
+
+    $scope.rejectAd = function(id){
+        adminData.adminRejectAd(id).$promise
+            .then(
+                function(succes){
+                    $scope.$parent.showSuccessMessage('Ad rejected successfully!');
+                },
+                function(error){
+                    $scope.$parent.showErrorMessage('An error has occurred!');
+                }
+            )
+    }
 
     $scope.reloadAdminAds = function(status, page, townid, categoryid) {
         switch (status) {

@@ -16,8 +16,8 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
             }
         });
 
-    var deactivateAdRes = $resource(
-        'http://softuni-ads.azurewebsites.net/api/user/ads/deactivate/:id',
+    var rejectAd = $resource(
+        'http://softuni-ads.azurewebsites.net/api/admin/ads/reject/:id',
         {id: '@id'},
         {
             update: {
@@ -25,8 +25,8 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
             }
         });
 
-    var publishAgainRes = $resource(
-        'http://softuni-ads.azurewebsites.net/api/user/ads/PublishAgain/:id',
+    var approveAd = $resource(
+        'http://softuni-ads.azurewebsites.net/api/admin/ads/Approve/:id',
         {id: '@id'},
         {
             update: {
@@ -75,14 +75,14 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         return resource.delete({id: id});
     }
 
-    function publishAgainAd(id) {
+    function adminApproveAd(id) {
         getHeaders();
-        return publishAgainRes.update({id: id});
+        return approveAd.update({id: id});
     }
 
-    function deactivateAd(id) {
+    function adminRejectAd(id) {
         getHeaders();
-        return deactivateAdRes.update({id: id});
+        return rejectAd.update({id: id});
     }
 
     function getProfile() {
@@ -106,8 +106,8 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         getAdById: getAdById,
         editAd: editAd,
         deleteAd: deleteAd,
-        deactivateAd:deactivateAd,
-        publishAgainAd: publishAgainAd,
+        adminRejectAd:adminRejectAd,
+        adminApproveAd: adminApproveAd,
         getProfile: getProfile,
         editProfile: editProfile,
         changePassword: changePassword

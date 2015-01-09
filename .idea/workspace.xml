@@ -23,15 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="publicController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/publicController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="46" selection-start="1948" selection-end="2083" vertical-scroll-proportion="0.0" vertical-offset="935" max-vertical-offset="1632">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="adminApp.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/modules/adminApp.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -44,16 +35,7 @@
       <file leaf-file-name="admin.index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/admin.index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="25" selection-start="1644" selection-end="1644" vertical-scroll-proportion="0.21636364" vertical-offset="306" max-vertical-offset="1564">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="public-data.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/services/public-data.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="62" selection-start="500" selection-end="538" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+            <state line="76" column="112" selection-start="11216" selection-end="11216" vertical-scroll-proportion="0.68" vertical-offset="918" max-vertical-offset="1564">
               <folding />
             </state>
           </provider>
@@ -71,7 +53,7 @@
       <file leaf-file-name="admin-data.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/services/admin-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="50" selection-start="1405" selection-end="1405" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2040">
+            <state line="108" column="35" selection-start="2627" selection-end="2627" vertical-scroll-proportion="0.0" vertical-offset="1451" max-vertical-offset="2040">
               <folding />
             </state>
           </provider>
@@ -80,16 +62,7 @@
       <file leaf-file-name="adminController.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/adminController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="59" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1020">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user-data.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/services/user-data.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="48" selection-start="2077" selection-end="2077" vertical-scroll-proportion="0.0" vertical-offset="431" max-vertical-offset="2040">
+            <state line="19" column="57" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1428">
               <folding />
             </state>
           </provider>
@@ -138,8 +111,8 @@
         <option value="$PROJECT_DIR$/app/modules/adminApp.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/controllers/userController.js" />
-        <option value="$PROJECT_DIR$/app/services/admin-data.js" />
         <option value="$PROJECT_DIR$/app/controllers/publicController.js" />
+        <option value="$PROJECT_DIR$/app/services/admin-data.js" />
         <option value="$PROJECT_DIR$/app/controllers/adminController.js" />
         <option value="$PROJECT_DIR$/app/templates/admin.index.html" />
       </list>
@@ -311,7 +284,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -668,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/admin-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="50" selection-start="1405" selection-end="1405" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2040">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/publicController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="46" selection-start="1948" selection-end="2083" vertical-scroll-proportion="0.0" vertical-offset="935" max-vertical-offset="1632">
@@ -689,16 +655,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/admin-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="35" selection-start="2627" selection-end="2627" vertical-scroll-proportion="0.0" vertical-offset="1451" max-vertical-offset="2040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/adminController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="59" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1020">
+        <state line="19" column="57" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1428">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin.index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="1644" selection-end="1644" vertical-scroll-proportion="0.21636364" vertical-offset="306" max-vertical-offset="1564">
+        <state line="76" column="112" selection-start="11216" selection-end="11216" vertical-scroll-proportion="0.68" vertical-offset="918" max-vertical-offset="1564">
           <folding />
         </state>
       </provider>
