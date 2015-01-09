@@ -1,7 +1,8 @@
-publicApp.controller('DeleteAdController', function($scope, $location, userData){
+publicApp.controller('DeleteAdController', function($scope, $location, userData, $cookieStore, $timeout){
+    var id;
+
     (function(){
         if(!$cookieStore.get('user')){
-            console.log('Unauthorized');
             return $location.path('/');
         } else {
             init();
@@ -9,9 +10,8 @@ publicApp.controller('DeleteAdController', function($scope, $location, userData)
     })();
 
     function init() {
-        var id = $location.path().split('/');
+        id = $location.path().split('/');
         id = id[id.length-1];
-
         $scope.ad=userData.getAdById(id).$promise
             .then(
             function(value) {
@@ -27,10 +27,11 @@ publicApp.controller('DeleteAdController', function($scope, $location, userData)
         userData.deleteAd(id).$promise
         .then(
             function() {
+                $scope.$parent.showSuccessMessage('Ad successfully deleted!');
                 $location.path('/user/ads');
             },
             function() {
-
+                $scope.$parent.showErrorMessage('An error has occurred!');
             }
         )
     }

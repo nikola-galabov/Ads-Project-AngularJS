@@ -6,7 +6,7 @@
 
 		<div class="form-group">
 			<label for="username">Username:</label>
-			<input class="form-control" id="username" name="username" type="text" data-ng-model="userLogin.username" required />
+			<input class="form-control" id="username" name="username" type="text" data-ng-model="credentials.username" required />
             <span class="validation-error" ng-show="login.username.$touched && (login.username.$dirty || login.username.$invalid)">
                 <span ng-show="login.username.$error.required">Required.</span>
             </span>
@@ -14,7 +14,7 @@
 
 		<div class="form-group">
 			<label for="password">Password:</label>
-			<input class="form-control" id="password" minlength="2" maxlength="100" name="password" type="password" data-ng-model="userLogin.password" required />
+			<input class="form-control" id="password" minlength="2" maxlength="100" name="password" type="password" data-ng-model="credentials.password" required />
             <span class="validation-error" ng-show="login.password.$touched && (login.password.$dirty || login.password.$invalid)">
                 <span ng-show="login.password.$error.required">Required.</span>
                 <span ng-show="login.password.$error.minlength || login.password.$error.maxlength">Password must be in range [2;100]</span>

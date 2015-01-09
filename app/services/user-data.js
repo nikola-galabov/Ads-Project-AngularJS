@@ -51,9 +51,6 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
         });
 
 	function getUserAds(status,page) {
-        if(page == null) {
-            page = 1;
-        }
         getHeaders();
 		return resource.get({status: status, startPage: page});
 	}

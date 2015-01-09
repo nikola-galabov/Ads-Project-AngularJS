@@ -4,15 +4,19 @@
     <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body data-ng-app="publicApp" data-ng-controller="PublicController">
+<body data-ng-app="publicApp" data-ng-controller="PublicController" ng-cloak>
 
 <!-- Header -->
 <header class="nav">
    <div class="container-fluid"> <h1 class="pull-left">Ads - Home</h1> <span class="pull-right" data-ng-show="user">{{user.username}} <button data-ng-click="logout()">Logout</button> </span> </div>
 </header>
 
+
 <!-- Alerts -->
-<div id="alertContainer" data-ng-show="{{alertVisible}}" alert type=''></div>
+<div id="alertContainer">
+    <div data-ng-show="showAlert" alert type='{{alert.type}}'>{{alert.msg}}</div>
+</div>
+
 
 <!-- Left sidebar -->
 <div class="container col-md-2">
@@ -50,6 +54,8 @@
 <script type="text/javascript" src="libs/angular-resource.js"></script>
 <script type="text/javascript" src="libs/angular-data-url.js"></script>
 <script type="text/javascript" src="libs/angular-cookies.js"></script>
+<script type="text/javascript" src="libs/ui-bootstrap-tpls-0.12.0.min.js"></script>
+<script type="text/javascript" src="libs/angular-animate.min.js"></script>
 <script type="text/javascript" src="modules/publicApp.js"></script>
 <script type="text/javascript" src="directives/compareTo.js"></script>
 <script type="text/javascript" src="services/public-data.js"></script>
@@ -59,5 +65,8 @@
 <script type="text/javascript" src="controllers/deleteAdController.js"></script>
 <script type="text/javascript" src="controllers/editAdController.js"></script>
 <script type="text/javascript" src="controllers/editProfile.js"></script>
+<script type="text/javascript" src="controllers/registerController.js"></script>
+<script type="text/javascript" src="controllers/loginController.js"></script>
+<script type="text/javascript" src="controllers/messageController.js"></script>
 </body>
 </html>

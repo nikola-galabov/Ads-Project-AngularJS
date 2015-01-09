@@ -31,13 +31,15 @@
 
     <!-- Pagination  -->
 
-    <nav>
-        <ul class="pagination">
-            <li data-ng-repeat="page in pages(ads.numPages)">
-                <button class="btn-default btn-sm" data-ng-click="reloadAds(categoryId,townId,page)">{{page}}</button>
-            </li>
-        </ul>
-    </nav>
+    <!--<nav>-->
+        <!--<ul class="pagination">-->
+            <!--<li data-ng-repeat="page in pages(ads.numPages)">-->
+                <!--<button class="btn-default btn-sm" data-ng-click="reloadAds(categoryId,townId,page)">{{page}}</button>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</nav>-->
+
+        <pagination total-items="numItems" ng-model="startPage" ng-click="reloadAds(categoryId,townId,startPage)"></pagination>
 </div>
 
 <!-- Filters section -->

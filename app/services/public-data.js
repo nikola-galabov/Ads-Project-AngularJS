@@ -9,9 +9,6 @@ publicApp.factory('publicData', function publicData($resource) {
     var login = $resource(BASE_URL + '/user/login');
 
     function getAds(categoryId,townId,page) {
-        if(page == null) {
-            page = 1;
-        }
         return ads.get({categoryId: categoryId,townId: townId, startPage: page});
     }
 

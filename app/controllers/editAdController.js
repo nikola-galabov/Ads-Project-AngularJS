@@ -1,7 +1,8 @@
-publicApp.controller('EditAdController', function($scope, $location, userData){
+publicApp.controller('EditAdController', function($scope, $location, $cookieStore, userData){
+    var id;
+
     (function(){
         if(!$cookieStore.get('user')){
-            console.log('Unauthorized');
             return $location.path('/');
         } else {
             init();
@@ -9,7 +10,7 @@ publicApp.controller('EditAdController', function($scope, $location, userData){
     })();
 
     function init() {
-        var id = $location.path().split('/');
+        id = $location.path().split('/');
         id = id[id.length-1];
 
         $scope.ad=userData.getAdById(id).$promise
@@ -17,8 +18,8 @@ publicApp.controller('EditAdController', function($scope, $location, userData){
             function(value) {
                 return $scope.ad = value;
             },
-            function(err) {
-
+            function(error) {
+                $scope.$parent.showErrorMessage('An error has occurred');
             }
         );
     }
@@ -26,20 +27,23 @@ publicApp.controller('EditAdController', function($scope, $location, userData){
     $scope.deleteImage = function() {
         $scope.ad['changeimage']=true;
         $scope.ad.imageDataUrl=null;
+        $scope.$parent.showSuccessMessage('Image successfully deleted!');
     }
 
     $scope.changeImage = function() {
         $scope.ad['changeimage']=true;
+        $scope.$parent.showSuccessMessage('Image successfully changed!');
     }
 
     $scope.updateTheAd = function(ad) {
         userData.editAd(id, ad).$promise
             .then(
             function() {
+                $scope.$parent.showSuccessMessage('Ad successfully edited!');
                 $location.path('/user/ads');
             },
-            function() {
-
+            function(error) {
+                $scope.$parent.showErrorMessage('An error has occurred');
             }
         )
     }

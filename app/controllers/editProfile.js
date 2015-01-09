@@ -1,7 +1,6 @@
-publicApp.controller('EditProfileController', function($scope, userData, publicData, $location){
+publicApp.controller('EditProfileController', function($scope, userData, $cookieStore, publicData, $location){
     (function(){
         if(!$cookieStore.get('user')){
-            console.log('Unauthorized');
             return $location.path('/');
         } else {
             init();
@@ -15,7 +14,7 @@ publicApp.controller('EditProfileController', function($scope, userData, publicD
                 return $scope.towns = value;
             },
             function(error){
-
+                $scope.$parent.showErrorMessage('An error has occurred.')
             }
         )
 
@@ -25,7 +24,7 @@ publicApp.controller('EditProfileController', function($scope, userData, publicD
                 return $scope.profile = value;
             },
             function(error){
-
+                $scope.$parent.showErrorMessage('An error has occurred.')
             }
         );
 
@@ -40,10 +39,10 @@ publicApp.controller('EditProfileController', function($scope, userData, publicD
         userData.editProfile(profile).$promise
             .then(
                 function(value){
-
+                    $scope.$parent.showSuccessMessage('Profile successfully updated.');
                 },
                 function(error){
-
+                    $scope.$parent.showErrorMessage('An error has occurred.');
                 }
             )
             .then(function(){
@@ -55,10 +54,10 @@ publicApp.controller('EditProfileController', function($scope, userData, publicD
         userData.changePassword(data).$promise
             .then(
                 function(value){
-
+                    $scope.$parent.showSuccessMessage('Password successfully changed.');
                 },
                 function(error){
-
+                    $scope.$parent.showErrorMessage('An error has occurred.');
                 }
             )
             .then(function(){

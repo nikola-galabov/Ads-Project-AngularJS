@@ -2,15 +2,23 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
 
     (function(){
         if(!$cookieStore.get('user')){
-            console.log('Unauthorized');
             return $location.path('/');
         } else {
             init();
         }
     })();
 
+
     function init() {
-        $scope.userAds = userData.getUserAds();
+        $scope.userAds = userData.getUserAds().$promise
+            .then(
+                function(value){
+                   return $scope.userAds = value;
+                },
+                function(error){
+                    $scope.$parent.showErrorMessage(error.data.message + error.data.modelState['']);
+                }
+            );
         $scope.status = 'all';
         $scope.startPage = 1;
         $scope.$location = $location;
@@ -27,11 +35,12 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
         userData.createAd($scope.ad)
             .$promise.then(
                 function(value){
+                    $scope.$parent.showSuccessMessage('The ad has been published successfully!');
                     $location.path('/user/ads');
                 },
 
-                function(err) {
-
+                function(error) {
+                    $scope.$parent.showErrorMessage('An error has occurred!');
                 });
     }
 
@@ -39,10 +48,11 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
         userData.publishAgainAd(id).$promise.
         then(
             function(){
+                $scope.$parent.showSuccessMessage('The ad has been published successfully!');
                 $scope.userAds = userData.getUserAds();
             },
             function(){
-
+                $scope.$parent.showErrorMessage('An error has occurred!');
             }
         );
     }
@@ -52,9 +62,10 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
             .then(
                 function(){
                     $scope.userAds = userData.getUserAds();
+                    $scope.$parent.showSuccessMessage('The ad has been deactivated successfully!');
                 },
                 function(error){
-
+                    $scope.$parent.showErrorMessage('An error has occurred!');
                 }
             );
     }
@@ -74,7 +85,7 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
                     return $scope.userAds=value;
                 },
                 function(error) {
-
+                    $scope.$parent.showErrorMessage('An error has occurred!');
                 }
             );
     }

@@ -1,5 +1,4 @@
 <div class="col-md-10 container" data-ng-controller="EditAdController">
-{{ad}}
     <form name="editAd" class="validated-form container-fluid form wrapper col-md-10 col-md-offset-1">
         <div class="row">
             <div class="col-md-6">
@@ -57,8 +56,8 @@
             <div class="col-md-6">
                 <input type="file" accept="image/png,image/jpeg,image/webp" data-ng-file data-ng-model="ad.imageDataUrl" data-ng-format="image/jpeg">
             </div>
-            <button class="col-md-6 btn-default" data-ng-click="deleteImage()">Delete image</button>
-            <button class="col-md-6 btn-default" data-ng-click="changeImage()">Change image</button>
+            <button class="col-md-6 btn-default" data-ng-disabled="!ad.imageDataUrl" data-ng-click="deleteImage()">Delete image</button>
+            <button class="col-md-6 btn-default" data-ng-disabled="!ad.imageDataUrl" data-ng-click="changeImage()">Change image</button>
         </div>
 
         <!--THIRD ROW-->

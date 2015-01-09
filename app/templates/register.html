@@ -5,7 +5,7 @@
 
 		<div class="form-group form-group-small">
 			<label for="username">Username:</label>
-			<input class="form-control" id="username" name="username" type="text" data-ng-model="userReg.username" required/>
+			<input class="form-control" id="username" name="username" type="text" data-ng-model="user.username" required/>
 
             <span class="validation-error" data-ng-show="registration.username.$touched && (registration.username.$dirty || registration.username.$invalid)">
                 <span data-ng-show="registration.username.$error.required">Required.</span>
@@ -14,7 +14,7 @@
 
 		<div class="form-group form-group-small">
 			<label for="password">Password:</label>
-			<input class="form-control" id="password" type="password" name="password" data-ng-model="userReg.password" data-minlength="2" maxlength="100" required />
+			<input class="form-control" id="password" type="password" name="password" data-ng-model="user.password" data-minlength="2" maxlength="100" required />
 
              <span class="validation-error" data-ng-show="registration.password.$touched && (registration.password.$dirty || registration.password.$invalid)">
                 <span data-ng-show="registration.password.$error.required">Required.</span>
@@ -24,7 +24,7 @@
 
 		<div class="form-group form-group-small">
 			<label for="confirm-password">Confimr Password:</label>
-			<input class="form-control" id="confirm-password" name="confirmPassword" type="password" data-ng-model="userReg.confirmPassword" required data-compare-to="userReg.password"/>
+			<input class="form-control" id="confirm-password" name="confirmPassword" type="password" data-ng-model="user.confirmPassword" required data-compare-to="user.password"/>
             <span class="validation-error" data-ng-show="registration.confirmPassword.$touched && (registration.confirmPassword.$dirty || registration.confirmPassword.$invalid)">
                 <span data-ng-show="registration.confirmPassword.$error.required">Required.</span>
                 <span data-ng-show="!registration.confirmPassword.$error.required && registration.confirmPassword.$error.compareTo">Password doesn't match!</span>
@@ -33,7 +33,7 @@
 
 		<div class="form-group form-group-small">
 			<label for="name">Name:</label>
-			<input class="form-control" id="name" name="name" type="text" data-ng-model="userReg.name" required />
+			<input class="form-control" id="name" name="name" type="text" data-ng-model="user.name" required />
             <span class="validation-error" data-ng-show="registration.name.$touched && (registration.name.$dirty || registration.name.$invalid)">
                 <span data-ng-show="registration.name.$error.required">Required.</span>
             </span>
@@ -41,7 +41,7 @@
 
 		<div class="form-group form-group-small">
 			<label for="mail">Email:</label>
-			<input class="form-control" id="mail" name="email" type="email" data-ng-model="userReg.email" required />
+			<input class="form-control" id="mail" name="email" type="email" data-ng-model="user.email" required />
 
             <span class="validation-error" data-ng-show="registration.email.$touched && (registration.email.$dirty || registration.email.$invalid)">
                 <span data-ng-show="registration.email.$error.required">Required.</span>
@@ -51,12 +51,12 @@
 
 		<div class="form-group form-group-small">
 			<label for="phone">Phone:</label>
-			<input class="form-control" id="phone" type="text" data-ng-model="userReg.phone" />
+			<input class="form-control" id="phone" type="text" data-ng-model="user.phone" />
 		</div>
 
 		<div class="form-group form-group-small">
 			<label for="town">Town:</label>
-            <select class="form-control" id="town" data-ng-model="userReg.townId">
+            <select class="form-control" id="town" data-ng-model="user.townId">
                 <option data-ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
             </select>
 		</div>
