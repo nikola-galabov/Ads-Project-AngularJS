@@ -1,15 +1,25 @@
 <div class="container col-md-10">
-    <div class="row wrapper">
-        <h3 class="text-center"><strong>My ads</strong></h3>
-        <hr/>
-        <ul class="list-unstyled container-fluid list-inline">
-            <li><button data-ng-model="status" data-ng-click="reloadUserAds('all',page)">All</button> </li>
-            <li data-ng-show="user"><button data-ng-model="status" data-ng-click="reloadUserAds('Published',page)">Published</button></li>
-            <li data-ng-show="user"><button data-ng-model="status" data-ng-click="reloadUserAds('Waiting Approval',page)">Waiting Approval</button></li>
-            <li data-ng-show="user"><button data-ng-model="status" data-ng-click="reloadUserAds('Inactive',page)">Inactive</button></li>
-            <li data-ng-show="user"><button data-ng-model="status" data-ng-click="reloadUserAds('Rejected',page)">Rejected</button></li>
-        </ul>
+    <div class="wrapper">
+
+        <div class="col-md-6">
+            <h3 class="text-center"><strong>My ads</strong></h3>
+            <hr/>
+        </div>
+
+        <div class="col-md-6">
+            <select class="form-control" data-ng-model="status">
+                <option value = "all">All</option>
+                <option value="Published">Published</option>
+                <option value="Waiting Approval">Waiting Approval</option>
+                <option value="Inactive" data-ng-click="reloadUserAds('Inactive',page)">Inactive</option>
+                <option value="Rejected" data-ng-click="reloadUserAds('Rejected',page)">Rejected</option>
+            </select>
+        </div>
+
+        <button class="center-block btn btn-default" data-ng-click="reloadUserAds(status,page)">Filter</button>
+
     </div>
+
     <div class="container-fluid row">
         <div class="ad col-md-12">
             <!-- Start of ad  -->
@@ -61,13 +71,15 @@
     </div>
 
     <!--Pagination-->
-    <nav>
-        <ul class="pagination">
-            <li data-ng-repeat="page in pages(userAds.numPages)">
-                <button class="btn-default btn-sm" data-ng-click="reloadUserAds(statusId,page)">{{page}}</button>
-            </li>
-        </ul>
-    </nav>
+    <!--<nav>-->
+        <!--<ul class="pagination">-->
+            <!--<li data-ng-repeat="page in pages(userAds.numPages)">-->
+                <!--<button class="btn-default btn-sm" data-ng-click="reloadUserAds(statusId,page)">{{page}}</button>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</nav>-->
+
+    <pagination total-items="numItems" ng-show="numItems" ng-model="startPage" ng-click="reloadUserAds(statusId,startPage)"></pagination>
 
 </div>
 

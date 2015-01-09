@@ -25,10 +25,14 @@
         <hr/>
         <ul class="list-unstyled">
             <li data-ng-show="!user"><a href="#/">Home</a> </li>
-            <li data-ng-show="user"><a href="#/user/home">Home</a></li>
-            <li data-ng-show="user"><a href="#/user/ads">My ads</a></li>
-            <li data-ng-show="user"><a href="#/user/ads/publish">Publish new ad</a></li>
-            <li data-ng-show="user"><a href="#/user/profile">Edit profile</a></li>
+            <li data-ng-show="user" data-ng-hide="user.isAdmin"><a href="#/user/home">Home</a></li>
+            <li data-ng-show="user" data-ng-hide="user.isAdmin"><a href="#/user/ads">My ads</a></li>
+            <li data-ng-show="user" data-ng-hide="user.isAdmin"><a href="#/user/ads/publish">Publish new ad</a></li>
+            <li data-ng-show="user" data-ng-hide="user.isAdmin"><a href="#/user/profile">Edit profile</a></li>
+            <li data-ng-show="user.isAdmin"><a href="#/">Ads</a> </li>
+            <li data-ng-show="user.isAdmin"><a href="#/">Users</a> </li>
+            <li data-ng-show="user.isAdmin"><a href="#/">Categories</a> </li>
+            <li data-ng-show="user.isAdmin"><a href="#/">Towns</a> </li>
         </ul>
     </div>
 
@@ -56,6 +60,8 @@
 <script type="text/javascript" src="libs/angular-cookies.js"></script>
 <script type="text/javascript" src="libs/ui-bootstrap-tpls-0.12.0.min.js"></script>
 <script type="text/javascript" src="libs/angular-animate.min.js"></script>
+<script type="text/javascript" src="modules/userApp.js"></script>
+<script type="text/javascript" src="modules/adminApp.js"></script>
 <script type="text/javascript" src="modules/publicApp.js"></script>
 <script type="text/javascript" src="directives/compareTo.js"></script>
 <script type="text/javascript" src="services/public-data.js"></script>

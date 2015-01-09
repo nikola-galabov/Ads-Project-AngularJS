@@ -9,10 +9,13 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
     })();
 
 
+    var lastStatus = 0;
+
     function init() {
         $scope.userAds = userData.getUserAds().$promise
             .then(
                 function(value){
+                   $scope.numItems = value;
                    return $scope.userAds = value;
                 },
                 function(error){
@@ -77,6 +80,12 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
             case 'Published' : status = 2; break;
             case 'Rejected' : status = 3; break;
             default : status = null;
+        }
+
+        if(status!=lastStatus){
+            $scope.startPage = 1;
+            page = 1;
+            lastStatus = status;
         }
 
         userData.getUserAds(status, page).$promise

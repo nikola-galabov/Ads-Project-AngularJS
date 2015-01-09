@@ -39,7 +39,7 @@
         <!--</ul>-->
     <!--</nav>-->
 
-        <pagination total-items="numItems" ng-model="startPage" ng-click="reloadAds(categoryId,townId,startPage)"></pagination>
+        <pagination total-items="numItems" ng-show="numItems" ng-model="startPage" ng-click="reloadAds(categoryId,townId,startPage)"></pagination>
 </div>
 
 <!-- Filters section -->
@@ -47,7 +47,7 @@
 
     <!-- First  -->
     <div class="wrapper">
-        <label for="categories" class="text-center"><strong>Categories</strong></label>
+        <label for="categories" class="text-center"><strong><h3>Categories</h3></strong></label>
         <hr/>
         <select name="towns" class="form-control" id="categories" data-ng-model="categoryId">
 

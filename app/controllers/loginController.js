@@ -9,7 +9,12 @@ publicApp.controller('LoginController', function($scope,$cookieStore,$location,p
             .$promise.then(
             function( value ){
                 $cookieStore.put('user', value);
-                $location.path('/user/home');
+                if(value.isAdmin){
+                    $location.path('/admin/home');
+                } else {
+                    $location.path('/user/home');
+                }
+
                 $scope.$parent.showSuccessMessage('Logged in successfully!');
                 $scope.$parent.user = $cookieStore.get('user');
             },
