@@ -14,7 +14,8 @@ publicApp.controller('EditProfileController', function($scope, userData, $cookie
                 return $scope.towns = value;
             },
             function(error){
-                $scope.$parent.showErrorMessage('An error has occurred.')
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
             }
         )
 
@@ -24,7 +25,8 @@ publicApp.controller('EditProfileController', function($scope, userData, $cookie
                 return $scope.profile = value;
             },
             function(error){
-                $scope.$parent.showErrorMessage('An error has occurred.')
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
             }
         );
 
@@ -42,7 +44,8 @@ publicApp.controller('EditProfileController', function($scope, userData, $cookie
                     $scope.$parent.showSuccessMessage('Profile successfully updated.');
                 },
                 function(error){
-                    $scope.$parent.showErrorMessage('An error has occurred.');
+                    var msg = error.data.message || 'An error has occurred';
+                    $scope.$parent.showErrorMessage(msg);
                 }
             )
             .then(function(){
@@ -57,7 +60,8 @@ publicApp.controller('EditProfileController', function($scope, userData, $cookie
                     $scope.$parent.showSuccessMessage('Password successfully changed.');
                 },
                 function(error){
-                    $scope.$parent.showErrorMessage('An error has occurred.');
+                    var msg = error.data.message || 'An error has occurred';
+                    $scope.$parent.showErrorMessage(msg);
                 }
             )
             .then(function(){

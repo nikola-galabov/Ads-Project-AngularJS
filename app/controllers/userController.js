@@ -19,7 +19,8 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
                    return $scope.userAds = value;
                 },
                 function(error){
-                    $scope.$parent.showErrorMessage(error.data.message + error.data.modelState['']);
+                    var msg = error.data.message || 'An error has occurred';
+                    $scope.$parent.showErrorMessage(msg);
                 }
             );
         $scope.status = 'all';
@@ -43,7 +44,8 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
                 },
 
                 function(error) {
-                    $scope.$parent.showErrorMessage('An error has occurred!');
+                    var msg = error.data.message || 'An error has occurred';
+                    $scope.$parent.showErrorMessage(msg);
                 });
     }
 
@@ -54,8 +56,9 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
                 $scope.$parent.showSuccessMessage('The ad has been published successfully!');
                 $scope.userAds = userData.getUserAds();
             },
-            function(){
-                $scope.$parent.showErrorMessage('An error has occurred!');
+            function(error){
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
             }
         );
     }
@@ -68,7 +71,8 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
                     $scope.$parent.showSuccessMessage('The ad has been deactivated successfully!');
                 },
                 function(error){
-                    $scope.$parent.showErrorMessage('An error has occurred!');
+                    var msg = error.data.message || 'An error has occurred';
+                    $scope.$parent.showErrorMessage(msg);
                 }
             );
     }
@@ -97,7 +101,8 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
                     return $scope.userAds=value;
                 },
                 function(error) {
-                    $scope.$parent.showErrorMessage('An error has occurred!');
+                    var msg = error.data.message || 'An error has occurred';
+                    $scope.$parent.showErrorMessage(msg);
                 }
             );
     }

@@ -17,7 +17,8 @@ adminApp.controller('AdminController',function($scope, adminData){
             return $scope.adminAds = value
         },
         function(error){
-            $scope.$parent.showErrorMessage('An error has occurred!');
+            var msg = error.data.message || 'An error has occurred';
+            $scope.$parent.showErrorMessage(msg);
         });
 
     $scope.approveAd = function(id) {
@@ -27,7 +28,8 @@ adminApp.controller('AdminController',function($scope, adminData){
                     $scope.$parent.showSuccessMessage('Ad approved successfully!');
                 },
                 function(err){
-                    $scope.$parent.showErrorMessage('An error has occurred!');
+                    var msg = error.data.message || 'An error has occurred';
+                    $scope.$parent.showErrorMessage(msg);
                 }
             )
     }
@@ -39,7 +41,8 @@ adminApp.controller('AdminController',function($scope, adminData){
                     $scope.$parent.showSuccessMessage('Ad rejected successfully!');
                 },
                 function(error){
-                    $scope.$parent.showErrorMessage('An error has occurred!');
+                    var msg = error.data.message || 'An error has occurred';
+                    $scope.$parent.showErrorMessage(msg);
                 }
             )
     }
@@ -70,7 +73,8 @@ adminApp.controller('AdminController',function($scope, adminData){
                 return $scope.adminAds=value;
             },
             function(error) {
-                $scope.$parent.showErrorMessage('An error has occurred!');
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
             }
         );
     }

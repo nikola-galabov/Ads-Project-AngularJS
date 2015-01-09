@@ -34,10 +34,10 @@
             <li data-ng-show="user" data-ng-hide="user.isAdmin"><a href="#/user/profile">Edit profile</a></li>
 
             <!--ONLY ADMIN-->
-            <li data-ng-show="user.isAdmin"><a href="#/">Ads</a> </li>
-            <li data-ng-show="user.isAdmin"><a href="#/">Users</a> </li>
-            <li data-ng-show="user.isAdmin"><a href="#/">Categories</a> </li>
-            <li data-ng-show="user.isAdmin"><a href="#/">Towns</a> </li>
+            <li data-ng-show="user.isAdmin"><a href="#/admin/home">Ads</a> </li>
+            <li data-ng-show="user.isAdmin"><a href="#/admin/users/list">Users</a> </li>
+            <li data-ng-show="user.isAdmin"><a href="#/admin/categories/list">Categories</a> </li>
+            <li data-ng-show="user.isAdmin"><a href="#/admin/towns/list">Towns</a> </li>
         </ul>
     </div>
 
@@ -82,6 +82,8 @@
 <script type="text/javascript" src="controllers/registerController.js"></script>
 <script type="text/javascript" src="controllers/loginController.js"></script>
 <script type="text/javascript" src="controllers/adminController.js"></script>
+<script type="text/javascript" src="controllers/admin.editAdController.js"></script>
+<script type="text/javascript" src="controllers/admin.deleteAdController.js"></script>
 
 </body>
 </html>

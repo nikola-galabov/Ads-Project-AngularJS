@@ -17,8 +17,9 @@ publicApp.controller('DeleteAdController', function($scope, $location, userData,
             function(value) {
                 return $scope.ad = value;
             },
-            function(err) {
-
+            function(error) {
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
             }
         );
     }

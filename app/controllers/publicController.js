@@ -41,7 +41,8 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
                 return $scope.ads = value;
             },
             function(error){
-                showErrorMessage('An error has occurred');
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
             });
     $scope.categories = publicData.getCategories().$promise.
         then(
@@ -49,7 +50,8 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
                 return $scope.categories = value;
             },
             function(error){
-                showErrorMessage('An error has occurred');
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
             });
     $scope.towns = publicData.getTowns().$promise.
         then(
@@ -57,7 +59,8 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
                 return $scope.towns = value;
             },
             function(error){
-                showErrorMessage('An error has occurred');
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
             });
 
     $scope.reloadAds = function(townid,categoryid,startPage) {

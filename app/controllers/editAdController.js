@@ -19,7 +19,8 @@ publicApp.controller('EditAdController', function($scope, $location, $cookieStor
                 return $scope.ad = value;
             },
             function(error) {
-                $scope.$parent.showErrorMessage('An error has occurred');
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
             }
         );
     }
@@ -43,7 +44,8 @@ publicApp.controller('EditAdController', function($scope, $location, $cookieStor
                 $location.path('/user/ads');
             },
             function(error) {
-                $scope.$parent.showErrorMessage('An error has occurred');
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
             }
         )
     }

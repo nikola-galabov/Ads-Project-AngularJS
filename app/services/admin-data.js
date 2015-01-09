@@ -60,17 +60,17 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         return resource.save(ad);
     }
 
-    function getAdById(id) {
+    function getAdminAdById(id) {
         getHeaders();
         return resource.get({id: id});
     }
 
-    function editAd(id, ad) {
+    function adminEditAd(id, ad) {
         getHeaders();
         return resource.update({id: id}, ad);
     }
 
-    function deleteAd(id) {
+    function adminDeleteAd(id) {
         getHeaders();
         return resource.delete({id: id});
     }
@@ -103,9 +103,9 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
     return {
         getAdminAds: getAdminAds,
         createAd: createNewAd,
-        getAdById: getAdById,
-        editAd: editAd,
-        deleteAd: deleteAd,
+        getAdminAdById: getAdminAdById,
+        adminEditAd: adminEditAd,
+        adminDeleteAd: adminDeleteAd,
         adminRejectAd:adminRejectAd,
         adminApproveAd: adminApproveAd,
         getProfile: getProfile,
