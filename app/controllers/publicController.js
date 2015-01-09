@@ -60,15 +60,6 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
                 showErrorMessage('An error has occurred');
             });
 
-//    $scope.pages = function (pages) {
-//        var result = [];
-//        for (var i = 0; i < pages; i++) {
-//            result.push(i + 1);
-//        }
-//
-//        return result;
-//    }
-
     $scope.reloadAds = function(townid,categoryid,startPage) {
         if(townid!=lastState.townsId||lastState.categoryId!=categoryid) {
             $scope.startPage = 1;

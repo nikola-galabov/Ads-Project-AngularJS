@@ -1,9 +1,87 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-    <h1>ADMIN PAGE</h1>
-</body>
-</html>
+<div class="col-md-10 container">
+    <!--FILTER-->
+    <div class="wrapper col-md-12">
+        <div class="container-fluid">
+            <div class="col-md-4">
+                <label for="status" class="text-center"><h3><strong>Ads' status</strong></h3></label>
+                <select id="status" class="form-control" data-ng-model="status">
+                    <option data-ng-show="user.isAdmin"  value="all">All</option>
+                    <option data-ng-show="user.isAdmin" value="Published">Published</option>
+                    <option data-ng-show="user.isAdmin" value="Waiting Approval">Waiting Approval</option>
+                    <option data-ng-show="user.isAdmin" value="Inactive">Inactive</option>
+                    <option data-ng-show="user.isAdmin" value="Rejected">Rejected</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="categories" class="text-center"><strong><h3><strong>Categories</strong></h3></strong></label>
+                <select name="towns" class="form-control" id="categories" data-ng-model="categoryId">
+
+                    <option data-ng-repeat="category in categories" value="{{category.id}}">{{category.name}}</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="towns" class="text-center"><strong><h3><strong>Towns</strong></h3></strong></label>
+                <select name="towns" id="towns" class="form-control" data-ng-model="townId">
+                    <option data-ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="col-md-6">
+                <button class="btn btn-default center-block" data-ng-click="reloadAdminAds(status, startPage,townId,categoryId)">Filter</button>
+            </div>
+
+            <div class="col-md-6">
+                <button class="btn btn-default center-block" data-ng-click="reloadAdminAds('all', 1,null,null)">Clear filter</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Start of ad  -->
+    <div class="wrapper container-fluid" data-ng-repeat="ad in adminAds.ads">
+
+        <div class="clearfix container-fluid">
+            <h2 class="pull-left"><strong>{{ad.title}}</strong></h2>
+
+            <h2 class="pull-right">{{ad.date | date:'dd MMM yyyy'}}</h2>
+        </div>
+
+        <div>
+            <div class="col-md-4 box">
+                <img class="img-responsive" data-ng-if="ad.imageDataUrl" data-ng-src="{{ad.imageDataUrl}}">
+                <img class="img-responsive" data-ng-if="!ad.imageDataUrl" data-ng-src="data:image/jpeg;base64,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">
+            </div>
+
+            <div class="col-md-8">
+                <div class="box fluid-container data-container">{{ad.text}}</div>
+                <div class="fluid-container data-container"><span class="col-md-2 text-right">Username:</span> <span
+                        class="box col-md-10">{{ad.ownerUsername}}</span></div>
+                <div class="fluid-container data-container"><span class="col-md-2 text-right">Name:</span> <span
+                        class="box col-md-10">{{ad.ownerName}}</span></div>
+                <div class="fluid-container data-container"><span class="col-md-2 text-right">Email:</span> <span
+                        class="box col-md-10">{{ad.ownerEmail}}</span></div>
+                <div class="fluid-container data-container"><span class="col-md-2 text-right">Tel:</span> <span
+                        class="box col-md-10">{{ad.ownerPhone}}</span></div>
+                <div class="fluid-container data-container"><span class="col-md-2 text-right">Category:</span> <span
+                        class="box col-md-10">{{ad.categoryName}}</span></div>
+                <div class="fluid-container data-container"><span class="col-md-2 text-right">Town:</span> <span
+                        class="box col-md-10">{{ad.townName}}</span></div>
+                <div class="fluid-container data-container"><span class="col-md-2 text-right">Name:</span> <span
+                        class="box col-md-10">{{ad.status}}</span></div>
+            </div>
+        </div>
+        
+        <div class="col-md-12">
+            <hr/>
+            <button data-ng-hide="" class="center-block btn btn-default col-md-3" data-ng-click="">Approve</button>
+            <button data-ng-hide="" class="center-block btn btn-default col-md-3" data-ng-click="">Reject</button>
+            <button data-ng-hide="" class="center-block btn btn-default col-md-3" data-ng-click="">Edit</button>
+            <button data-ng-hide="" class="center-block btn btn-default col-md-3" data-ng-click="">Delete</button>
+        </div>
+
+    </div>
+
+    <pagination total-items="numItems" ng-show="numItems" ng-model="startPage" data-ng-click="reloadAdminAds(status,startPage)"></pagination>
+
+</div>

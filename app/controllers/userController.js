@@ -91,6 +91,9 @@ publicApp.controller('UserController',function($route, $scope, $location, $timeo
         userData.getUserAds(status, page).$promise
             .then(
                 function(value){
+                    if($scope.startPage == 1){
+                        $scope.numItems = value.numItems;
+                    }
                     return $scope.userAds=value;
                 },
                 function(error) {

@@ -24,11 +24,16 @@
         <h3 class="text-center"><strong>Navigation</strong></h3>
         <hr/>
         <ul class="list-unstyled">
+            <!--ONLY PUBLIC -->
             <li data-ng-show="!user"><a href="#/">Home</a> </li>
+
+            <!--ONLY USER-->
             <li data-ng-show="user" data-ng-hide="user.isAdmin"><a href="#/user/home">Home</a></li>
             <li data-ng-show="user" data-ng-hide="user.isAdmin"><a href="#/user/ads">My ads</a></li>
             <li data-ng-show="user" data-ng-hide="user.isAdmin"><a href="#/user/ads/publish">Publish new ad</a></li>
             <li data-ng-show="user" data-ng-hide="user.isAdmin"><a href="#/user/profile">Edit profile</a></li>
+
+            <!--ONLY ADMIN-->
             <li data-ng-show="user.isAdmin"><a href="#/">Ads</a> </li>
             <li data-ng-show="user.isAdmin"><a href="#/">Users</a> </li>
             <li data-ng-show="user.isAdmin"><a href="#/">Categories</a> </li>
@@ -36,6 +41,8 @@
         </ul>
     </div>
 
+
+    <!--ONLY PUBLIC-->
     <div data-ng-hide="user" class="wrapper">
         <h3 class="text-center">To publish a new ad, please login</h3>
         <a href="#/login" class="btn btn-default btn-lg">Login</a>
@@ -66,6 +73,7 @@
 <script type="text/javascript" src="directives/compareTo.js"></script>
 <script type="text/javascript" src="services/public-data.js"></script>
 <script type="text/javascript" src="services/user-data.js"></script>
+<script type="text/javascript" src="services/admin-data.js"></script>
 <script type="text/javascript" src="controllers/publicController.js"></script>
 <script type="text/javascript" src="controllers/userController.js"></script>
 <script type="text/javascript" src="controllers/deleteAdController.js"></script>
@@ -73,6 +81,7 @@
 <script type="text/javascript" src="controllers/editProfile.js"></script>
 <script type="text/javascript" src="controllers/registerController.js"></script>
 <script type="text/javascript" src="controllers/loginController.js"></script>
-<script type="text/javascript" src="controllers/messageController.js"></script>
+<script type="text/javascript" src="controllers/adminController.js"></script>
+
 </body>
 </html>
