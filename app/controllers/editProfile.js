@@ -1,6 +1,16 @@
 publicApp.controller('EditProfileController', function($scope, userData, publicData, $location){
-    $scope.towns = publicData.getTowns().$promise
-        .then(
+    (function(){
+        if(!$cookieStore.get('user')){
+            console.log('Unauthorized');
+            return $location.path('/');
+        } else {
+            init();
+        }
+    })();
+
+    function init() {
+        $scope.towns = publicData.getTowns().$promise
+            .then(
             function(value){
                 return $scope.towns = value;
             },
@@ -9,15 +19,22 @@ publicApp.controller('EditProfileController', function($scope, userData, publicD
             }
         )
 
-    $scope.profile = userData.getProfile().$promise
-        .then(
+        $scope.profile = userData.getProfile().$promise
+            .then(
             function(value){
                 return $scope.profile = value;
             },
             function(error){
 
             }
-    );
+        );
+
+        $scope.passwordData = {
+            oldPassword:'',
+            newPassword:'',
+            confirmPassword:''
+        }
+    }
 
     $scope.updateProfile = function(profile){
         userData.editProfile(profile).$promise
@@ -32,12 +49,6 @@ publicApp.controller('EditProfileController', function($scope, userData, publicD
             .then(function(){
                     return $location.path('/user/home');
                 });
-    }
-
-    $scope.passwordData = {
-        oldPassword:'',
-        newPassword:'',
-        confirmPassword:''
     }
 
     $scope.changePassword = function(data) {

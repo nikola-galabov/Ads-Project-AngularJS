@@ -1,16 +1,27 @@
 publicApp.controller('EditAdController', function($scope, $location, userData){
-    var id = $location.path().split('/');
-    id = id[id.length-1];
-
-    $scope.ad=userData.getAdById(id).$promise
-        .then(
-        function(value) {
-            return $scope.ad = value;
-        },
-        function(err) {
-
+    (function(){
+        if(!$cookieStore.get('user')){
+            console.log('Unauthorized');
+            return $location.path('/');
+        } else {
+            init();
         }
-    );
+    })();
+
+    function init() {
+        var id = $location.path().split('/');
+        id = id[id.length-1];
+
+        $scope.ad=userData.getAdById(id).$promise
+            .then(
+            function(value) {
+                return $scope.ad = value;
+            },
+            function(err) {
+
+            }
+        );
+    }
 
     $scope.deleteImage = function() {
         $scope.ad['changeimage']=true;

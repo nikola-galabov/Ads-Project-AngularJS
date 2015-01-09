@@ -12,7 +12,7 @@
 </header>
 
 <!-- Alerts -->
-<div data-ng-show="alertShow" data-ng-hide="!alertShow" data-ng-animate="'animate'" alert type="{{alert.type}}" close="closeAlert()">{{alert.msg}}</div>
+<div id="alertContainer" data-ng-show="{{alertVisible}}" alert type=''></div>
 
 <!-- Left sidebar -->
 <div class="container col-md-2">
@@ -49,16 +49,15 @@
 <script type="text/javascript" src="libs/angular-route.js"></script>
 <script type="text/javascript" src="libs/angular-resource.js"></script>
 <script type="text/javascript" src="libs/angular-data-url.js"></script>
-<script src="libs/angular-cookies.js"></script>
-<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+<script type="text/javascript" src="libs/angular-cookies.js"></script>
 <script type="text/javascript" src="modules/publicApp.js"></script>
 <script type="text/javascript" src="directives/compareTo.js"></script>
 <script type="text/javascript" src="services/public-data.js"></script>
 <script type="text/javascript" src="services/user-data.js"></script>
 <script type="text/javascript" src="controllers/publicController.js"></script>
-<script src="controllers/userController.js"></script>
-<script src="controllers/deleteAdController.js"></script>
-<script src="controllers/editAdController.js"></script>
-<script src="controllers/editProfile.js"></script>
+<script type="text/javascript" src="controllers/userController.js"></script>
+<script type="text/javascript" src="controllers/deleteAdController.js"></script>
+<script type="text/javascript" src="controllers/editAdController.js"></script>
+<script type="text/javascript" src="controllers/editProfile.js"></script>
 </body>
 </html>

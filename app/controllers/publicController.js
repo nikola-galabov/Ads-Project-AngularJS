@@ -1,13 +1,32 @@
-publicApp.controller('PublicController', function PublicController($scope, $cookieStore, $location, $timeout, publicData) {
-    $scope.ads = publicData.getAds();
-    $scope.categories = publicData.getCategories();
-    $scope.towns = publicData.getTowns();
+publicApp.controller('PublicController', function PublicController($scope, $cookieStore, $location, publicData) {
+    $scope.ads = publicData.getAds().$promise.
+        then(
+            function(value){
+                return $scope.ads = value;
+            },
+            function(error){
+
+            });
+    $scope.categories = publicData.getCategories().$promise.
+        then(
+            function(value){
+                return $scope.categories = value;
+            },
+            function(error){
+
+            });
+    $scope.towns = publicData.getTowns().$promise.
+        then(
+            function(value){
+                return $scope.towns = value;
+            },
+            function(error){
+
+            });
     $scope.townsId = null;
     $scope.categoryId = null;
     $scope.startPage = 1;
-
     $scope.user = $cookieStore.get('user');
-
 
     $scope.pages = function (pages) {
         var result = [];
@@ -33,25 +52,17 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
         phone:''
     }
 
-    $scope.alertShow = false;
-
     $scope.register = function() {
-         publicData.registerUser($scope.userReg)
-            .$promise.then(
+         publicData.registerUser($scope.userReg).$promise
+             .then(
                 function( value ){
                     $cookieStore.put('user', value);
-                    $scope.alert = { type: 'success', msg: 'Successful registration!' };
                     $location.path('/user/home');
                     $scope.user = $cookieStore.get('user');
                 },
-                 function( error ){
+                function( error ){
                      console.log(error)
-                     $scope.alert = { type: 'danger', msg: error.data.message };
-                 }).then(
-                 function() {
-                     $scope.alertShow=true;
-                     $timeout(closeAlert, 5000);
-                 });
+                });
     }
 
     $scope.userLogin = {
@@ -62,18 +73,13 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
     $scope.loginUser = function() {
         $scope.userLogin = publicData.loginUser($scope.userLogin)
             .$promise.then(
-            function( value ){
-                $cookieStore.put('user', value);
-                $scope.alert = { type: 'success', msg: 'Successful logged!' };
-                $location.path('/user/home');
-                $scope.user = $cookieStore.get('user');
-            },
-            function( error ){
-                $scope.alert = { type: 'danger', msg: error.data.error_description };
-            }).then(
-                function() {
-                    $scope.alertShow=true;
-                    $timeout(closeAlert, 5000);
+                function( value ){
+                    $cookieStore.put('user', value);
+                    $location.path('/user/home');
+                    $scope.user = $cookieStore.get('user');
+                },
+                function( error ){
+
                 });
     }
 
@@ -82,13 +88,5 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
         $scope.user = $cookieStore.get('user');
         $location.path('/');
     }
-
-    $scope.closeAlert = closeAlert;
-
-    function closeAlert() {
-        $scope.alertShow=false;
-    }
-
-    $scope.$location = $location;
 
 });
