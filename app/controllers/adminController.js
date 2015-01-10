@@ -1,25 +1,50 @@
-adminApp.controller('AdminController',function($scope, adminData){
+adminApp.controller('AdminController',function($scope, adminData, $cookieStore, $location){
 
-    var lastState = {
-        townsId: null,
-        categoryId: null,
-        status: null
+    (function(){
+        if(!$cookieStore.get('user')){
+            return $location.path('/');
+        } else {
+            init();
+        }
+    })();
+
+    var lastState;
+
+    function init() {
+        lastState = {
+            townsId: null,
+            categoryId: null,
+            status: null
+        }
+
+        $scope.status = 'all';
+        $scope.startPage = 1;
+        $scope.numItems;
+
+        $scope.adminAds = adminData.getAdminAds().$promise
+            .then(
+            function(value){
+                $scope.numItems = value.numItems;
+                return $scope.adminAds = value
+            },
+            function(error){
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
+            });
+
+        $scope.usersList = adminData.getUsersList().$promise
+            .then(
+            function(value){
+                $scope.numItems = value.numItems;
+                return $scope.usersList = value;
+            },
+            function(error){
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
+            }
+        );
     }
 
-    $scope.status = 'all';
-    $scope.startPage = 1;
-    $scope.numItems;
-
-    $scope.adminAds = adminData.getAdminAds().$promise
-        .then(
-        function(value){
-            $scope.numItems = value.numItems;
-            return $scope.adminAds = value
-        },
-        function(error){
-            var msg = error.data.message || 'An error has occurred';
-            $scope.$parent.showErrorMessage(msg);
-        });
 
     $scope.approveAd = function(id) {
         adminData.adminApproveAd(id).$promise
@@ -47,18 +72,6 @@ adminApp.controller('AdminController',function($scope, adminData){
             )
     }
 
-    $scope.usersList = adminData.getUsersList().$promise
-        .then(
-            function(value){
-                $scope.numItems = value.numItems;
-                return $scope.usersList = value;
-            },
-            function(error){
-                var msg = error.data.message || 'An error has occurred';
-                $scope.$parent.showErrorMessage(msg);
-            }
-        )
-
     $scope.reloadUsersList = function(page,sortType,sortby) {
         var sortBy = sortType ? sortType + sortby : sortby ;
         adminData.getUsersList(page, sortBy).$promise
@@ -71,6 +84,16 @@ adminApp.controller('AdminController',function($scope, adminData){
                     $scope.$parent.showErrorMessage(msg);
                 }
             )
+    }
+
+    $scope.deleteUser= function (user) {
+        $scope.$parent.userToDelete = user;
+        $location.path('/admin/users/delete/user.username');
+    }
+
+    $scope.edtUser = function (user) {
+        $scope.$parent.userToDelete = user;
+        $location.path('/admin/users/edit/user.username');
     }
 
     $scope.reloadAdminAds = function(status, page, townid, categoryid) {

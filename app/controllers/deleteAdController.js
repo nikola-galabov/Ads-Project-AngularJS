@@ -1,13 +1,13 @@
 publicApp.controller('DeleteAdController', function($scope, $location, userData, $cookieStore, $timeout){
     var id;
 
-//    (function(){
-//        if(!$cookieStore.get('user')){
-//            return $location.path('/');
-//        } else {
-//            init();
-//        }
-//    })();
+    (function(){
+        if(!$cookieStore.get('user')){
+            return $location.path('/');
+        } else {
+            init();
+        }
+    })();
 
     function init() {
         id = $location.path().split('/');

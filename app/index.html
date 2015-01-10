@@ -28,10 +28,10 @@
             <li data-ng-show="!user"><a href="#/">Home</a> </li>
 
             <!--ONLY USER-->
-            <li data-ng-show="user" data-ng-hide="user.isAdmin"><a href="#/user/home">Home</a></li>
-            <li data-ng-show="user" data-ng-hide="user.isAdmin"><a href="#/user/ads">My ads</a></li>
-            <li data-ng-show="user" data-ng-hide="user.isAdmin"><a href="#/user/ads/publish">Publish new ad</a></li>
-            <li data-ng-show="user" data-ng-hide="user.isAdmin"><a href="#/user/profile">Edit profile</a></li>
+            <li data-ng-show="user&&!user.isAdmin" ><a href="#/user/home">Home</a></li>
+            <li data-ng-show="user&&!user.isAdmin" ><a href="#/user/ads">My ads</a></li>
+            <li data-ng-show="user&&!user.isAdmin" ><a href="#/user/ads/publish">Publish new ad</a></li>
+            <li data-ng-show="user&&!user.isAdmin" ><a href="#/user/profile">Edit profile</a></li>
 
             <!--ONLY ADMIN-->
             <li data-ng-show="user.isAdmin"><a href="#/admin/home">Ads</a></li>
@@ -85,7 +85,7 @@
 <script type="text/javascript" src="controllers/admin.editAdController.js"></script>
 <script type="text/javascript" src="controllers/admin.deleteAdController.js"></script>
 <script type="text/javascript" src="controllers/deleteUserController.js"></script>
-<script type="text/javascript" src="controllers/admin.editAdController.js"></script>
+<script type="text/javascript" src="controllers/admin.editUserController.js"></script>
 
 </body>
 </html>

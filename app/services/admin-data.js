@@ -1,4 +1,6 @@
 var PAGE_SIZE = 10;
+var BASE_URL = 'http://localhost:1337/api/';
+//var BASE_URL = 'http://softuni-ads.azurewebsites.net/api/';
 adminApp.factory('adminData', function adminData($resource, $cookieStore, $http) {
 
     function getHeaders() {
@@ -8,7 +10,7 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
     }
 
     var resource = $resource(
-        'http://softuni-ads.azurewebsites.net/api/admin/ads/:id?PageSize=' + PAGE_SIZE,
+        BASE_URL + 'admin/ads/:id?PageSize=' + PAGE_SIZE,
         {id: '@id'},
         {
             update: {
@@ -17,7 +19,7 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         });
 
     var rejectAd = $resource(
-        'http://softuni-ads.azurewebsites.net/api/admin/ads/reject/:id',
+        BASE_URL+'admin/ads/reject/:id',
         {id: '@id'},
         {
             update: {
@@ -26,7 +28,7 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         });
 
     var approveAd = $resource(
-        'http://softuni-ads.azurewebsites.net/api/admin/ads/Approve/:id',
+        BASE_URL+'admin/ads/Approve/:id',
         {id: '@id'},
         {
             update: {
@@ -35,7 +37,7 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         });
 
     var users = $resource(
-        'http://softuni-ads.azurewebsites.net/api/admin/users/:id?PageSize='+ PAGE_SIZE,{id:'@id'},
+        BASE_URL+'admin/users/:id?PageSize='+ PAGE_SIZE,{id:'@id'},
         {
             update: {
                 method: 'PUT'
@@ -43,15 +45,16 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         });
 
     var profile = $resource(
-        'http://softuni-ads.azurewebsites.net/api/user/profile',{},
+        BASE_URL+'admin/user/:username',{username: '@username'},
         {
             update: {
                 method: 'PUT'
             }
         });
 
+
     var password = $resource(
-        'http://softuni-ads.azurewebsites.net/api/user/changePassword',{},
+        BASE_URL+'api/admin/setPassword',{},
         {
             update: {
                 method: 'PUT'
@@ -93,22 +96,17 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         return users.get({sortBy:sortby,startPage:page});
     }
 
-    function getUserByUsername(id) {
+    function adminDeleteUser(username) {
         getHeaders();
-        return users.get({id:id});
+        return profile.delete({username:username});
     }
 
-    function getProfile() {
+    function adminEditUser(username, profileData) {
         getHeaders();
-        return profile.get();
+        return profile.update({username:username},profileData);
     }
 
-    function editProfile(profileData) {
-        getHeaders();
-        return profile.update(profileData);
-    }
-
-    function changePassword(data) {
+    function adminSetPassword(data) {
         getHeaders();
         return password.update(data);
     }
@@ -121,9 +119,8 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         adminRejectAd:adminRejectAd,
         adminApproveAd: adminApproveAd,
         getUsersList: getUsersList,
-        getUserByUsername:getUserByUsername,
-        getProfile: getProfile,
-        editProfile: editProfile,
-        changePassword: changePassword
+        adminDeleteUser: adminDeleteUser,
+        adminEditUser: adminEditUser,
+        adminSetPassword: adminSetPassword
     }
 });

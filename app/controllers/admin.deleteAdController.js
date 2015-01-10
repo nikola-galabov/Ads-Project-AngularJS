@@ -1,9 +1,20 @@
-adminApp.controller('AdminDeleteAdController', function($scope, $location, adminData){
-    var id = $location.path().split('/');
-    id = id[id.length-1];
+adminApp.controller('AdminDeleteAdController', function($scope, $location, adminData,$cookieStore){
+    (function(){
+        if(!$cookieStore.get('user')){
+            return $location.path('/');
+        } else {
+            init();
+        }
+    })();
 
-    $scope.ad = adminData.getAdminAdById(id).$promise
-        .then(
+    var id;
+
+    function init(){
+        id = $location.path().split('/');
+        id = id[id.length-1];
+
+        $scope.ad = adminData.getAdminAdById(id).$promise
+            .then(
             function(value){
                 return $scope.ad = value;
             },
@@ -12,6 +23,8 @@ adminApp.controller('AdminDeleteAdController', function($scope, $location, admin
                 $scope.$parent.showErrorMessage(msg);
             }
         );
+    }
+
     $scope.adminDeleteAd = function(id) {
         adminData.adminDeleteAd(id).$promise
             .then(

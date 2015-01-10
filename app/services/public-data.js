@@ -1,4 +1,5 @@
-var BASE_URL = 'http://softuni-ads.azurewebsites.net/api';
+//var BASE_URL = 'http://softuni-ads.azurewebsites.net/api';
+var BASE_URL = 'http://localhost:1337/api';
 var PAGE_SIZE = 10;
 
 publicApp.factory('publicData', function publicData($resource) {

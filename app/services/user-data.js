@@ -1,4 +1,6 @@
 var PAGE_SIZE = 10;
+var BASE_URL = 'http://localhost:1337/api';
+//var BASE_URL = 'http://softuni-ads.azurewebsites.net/api';
 publicApp.factory('userData', function userData($resource, $cookieStore, $http) {
     //var HEADERS = {'Authorization':'Bearer '+$cookieStore.get('user').acces_token};
     function getHeaders() {
@@ -8,7 +10,7 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
     }
 
 	var resource = $resource(
-		'http://softuni-ads.azurewebsites.net/api/user/ads/:id?PageSize=' + PAGE_SIZE,
+		BASE_URL+'/user/ads/:id?PageSize=' + PAGE_SIZE,
 		{id: '@id'}, 
 		{
             update: {
@@ -17,7 +19,7 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
 	});
 
     var deactivateAdRes = $resource(
-        'http://softuni-ads.azurewebsites.net/api/user/ads/deactivate/:id',
+        BASE_URL+'/user/ads/deactivate/:id',
         {id: '@id'},
         {
             update: {
@@ -26,7 +28,7 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
         });
 
     var publishAgainRes = $resource(
-        'http://softuni-ads.azurewebsites.net/api/user/ads/PublishAgain/:id',
+        BASE_URL+'/user/ads/PublishAgain/:id',
         {id: '@id'},
         {
             update: {
@@ -35,7 +37,7 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
         });
 
     var profile = $resource(
-        'http://softuni-ads.azurewebsites.net/api/user/profile',{},
+        BASE_URL+'/user/profile',{},
         {
             update: {
                 method: 'PUT'
@@ -43,7 +45,7 @@ publicApp.factory('userData', function userData($resource, $cookieStore, $http) 
         });
 
     var password = $resource(
-        'http://softuni-ads.azurewebsites.net/api/user/changePassword',{},
+        BASE_URL+'/user/changePassword',{},
         {
             update: {
                 method: 'PUT'

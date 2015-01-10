@@ -1,11 +1,11 @@
 publicApp.controller('EditProfileController', function($scope, userData, $cookieStore, publicData, $location){
-//    (function(){
-//        if(!$cookieStore.get('user')){
-//            return $location.path('/');
-//        } else {
-//            init();
-//        }
-//    })();
+    (function(){
+        if(!$cookieStore.get('user')){
+            return $location.path('/');
+        } else {
+            init();
+        }
+    })();
 
     function init() {
         $scope.towns = publicData.getTowns().$promise
@@ -29,12 +29,12 @@ publicApp.controller('EditProfileController', function($scope, userData, $cookie
                 $scope.$parent.showErrorMessage(msg);
             }
         );
+    }
 
-        $scope.passwordData = {
-            oldPassword:'',
-            newPassword:'',
-            confirmPassword:''
-        }
+    $scope.passwordData = {
+        oldPassword:'',
+        newPassword:'',
+        confirmPassword:''
     }
 
     $scope.updateProfile = function(profile){
@@ -53,20 +53,18 @@ publicApp.controller('EditProfileController', function($scope, userData, $cookie
                 });
     }
 
-    $scope.changePassword = function(data) {
+    $scope.changeUserPassword = function(data) {
         userData.changePassword(data).$promise
             .then(
                 function(value){
                     $scope.$parent.showSuccessMessage('Password successfully changed.');
+                    return $location.path('/user/home');
                 },
                 function(error){
                     var msg = error.data.message || 'An error has occurred';
                     $scope.$parent.showErrorMessage(msg);
                 }
-            )
-            .then(function(){
-                return $location.path('/user/home');
-            });
+            );
     }
 
 });

@@ -37,7 +37,7 @@
                     <td>{{user.townName}}</td>
                     <td>{{user.email}}</td>
                     <td>{{user.phoneNumber}}</td>
-                    <td><a href="#/admin/users/edit/{{user.username}}">Edit</a> <a href="#/admin/users/delete/{{user.username}}">Delete</a></td>
+                    <td><button class="btn btn-sm" data-ng-click="edtUser(user)">Edit</button> <button class="btn btn-sm" data-ng-click="deleteUser(user)">Delete</button></td>
                 </tr>
             </tbody>
         </thead>

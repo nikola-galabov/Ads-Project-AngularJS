@@ -2,6 +2,17 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
     $scope.townsId = null;
     $scope.categoryId = null;
     $scope.startPage = 1;
+    $scope.user;
+    if($cookieStore.get('user')){
+        $scope.user = $cookieStore.get('user');
+        if($scope.user.isAdmin){
+            $location.path('/admin/home');
+        } else{
+            $location.path('/user/home');
+        }
+    } else {
+        $scope.user = false;
+    }
     $scope.user = $cookieStore.get('user');
     $scope.showAlert = false;
     $scope.alert = '';
@@ -44,6 +55,7 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
                 var msg = error.data.message || 'An error has occurred';
                 $scope.$parent.showErrorMessage(msg);
             });
+
     $scope.categories = publicData.getCategories().$promise.
         then(
             function(value){
@@ -53,6 +65,7 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
                 var msg = error.data.message || 'An error has occurred';
                 $scope.$parent.showErrorMessage(msg);
             });
+
     $scope.towns = publicData.getTowns().$promise.
         then(
             function(value){
@@ -84,9 +97,11 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
             );
     }
 
+    $scope.userToDelete = {};
+
     $scope.logout = function() {
         $cookieStore.remove('user');
-        $scope.user = $cookieStore.get('user');
+        $scope.user = false;
         $location.path('/');
         showSuccessMessage('Successfully logged out');
     }
