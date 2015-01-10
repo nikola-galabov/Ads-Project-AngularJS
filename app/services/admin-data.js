@@ -1,6 +1,6 @@
 var PAGE_SIZE = 10;
-var BASE_URL = 'http://localhost:1337/api/';
-//var BASE_URL = 'http://softuni-ads.azurewebsites.net/api/';
+//var BASE_URL = 'http://localhost:1337/api/';
+var BASE_URL = 'http://softuni-ads.azurewebsites.net/api/';
 adminApp.factory('adminData', function adminData($resource, $cookieStore, $http) {
 
     function getHeaders() {
@@ -54,12 +54,22 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
 
 
     var password = $resource(
-        BASE_URL+'api/admin/setPassword',{},
+        BASE_URL+'admin/setPassword',{},
         {
             update: {
                 method: 'PUT'
             }
         });
+
+    var categories = $resource(
+        BASE_URL+'admin/Categories/:id',{id:'@id'},
+        {
+            update: {
+                method: 'PUT'
+            }
+        });
+
+
 
     function getAdminAds(status,page,townId,categoryId) {
         getHeaders();
@@ -111,6 +121,16 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         return password.update(data);
     }
 
+    function adminGetCategories(){
+        getHeaders();
+        return categories.get()
+    }
+
+    function adminGetCategoriesById(id){
+        getHeaders();
+        return categories.get({id:id})
+    }
+
     return {
         getAdminAds: getAdminAds,
         getAdminAdById: getAdminAdById,
@@ -121,6 +141,7 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         getUsersList: getUsersList,
         adminDeleteUser: adminDeleteUser,
         adminEditUser: adminEditUser,
-        adminSetPassword: adminSetPassword
+        adminSetPassword: adminSetPassword,
+        adminGetCategories: adminGetCategories
     }
 });

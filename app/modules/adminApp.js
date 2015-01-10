@@ -25,4 +25,8 @@ adminApp.config(function($routeProvider){
         templateUrl: 'templates/admin-edit-user.html',
         controller: 'AdminEditUserController'
     });
+    $routeProvider.when('/admin/categories/list',{
+        templateUrl: 'templates/admin.categories.html',
+        controller: 'AdminController'
+    });
 })

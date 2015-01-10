@@ -1,0 +1,39 @@
+<div class="container col-md-10">
+    <div class="container-fluid col-md-12">
+        <div class="col-md-6">
+            <label for="sort">SortBy:</label>
+            <select id="sort" data-ng-model="sortBy" class="form-control">
+                <option value="Name">Name</option>
+                <option value="Email">Id</option>
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label for="sortType">SortBy:</label>
+            <select id="sortType" data-ng-model="sortType" class="form-control">
+                <option value="">Ascending</option>
+                <option value="-">Descending</option>
+            </select>
+        </div>
+    </div>
+
+    <button class="btn btn-default" data-ng-click="reloadCategories(startPage,sortType,sortBy)">Sort</button>
+    <table class="table table-bordered table-responsive table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Category</th>
+            <th>Action</th>
+        </tr>
+        <tbody>
+        
+        <tr data-ng-repeat="category in categories.categories">
+            <td>{{category.id}}</td>
+            <td>{{category.username}}</td>
+            <td><button class="btn btn-sm" data-ng-click="editCategory(user)">Edit</button> <button class="btn btn-sm" data-ng-click="deleteCategory(user)">Delete</button></td>
+        </tr>
+        </tbody>
+        </thead>
+    </table>
+    <pagination total-items="numItems" ng-show="numItems" ng-model="startPage" data-ng-click="reloadCategoryList(startPage,sortBy)"></pagination>
+</div>

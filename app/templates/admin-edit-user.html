@@ -52,7 +52,7 @@
 
             <div class="form-group">
                 <label for="new-pass">New Password:</label>
-                <input name="newPassword" data-ng-model="passwordData.password" data-minLength="2" data-maxLength="100" class="form-control" id="new-pass" type="password" required />
+                <input name="newPassword" data-ng-model="passwordData.newPassword" data-minLength="2" data-maxLength="100" class="form-control" id="new-pass" type="password" required />
             <span class="validation-error" data-ng-show="changePassword.newPassword.$touched && (changePassword.newPassword.$dirty || changePassword.newPassword.$invalid)">
                 <span data-ng-show="changePassword.newPassword.$error.required">Required.</span>
                 <span data-ng-show="changePassword.newPassword.$error.minlength || changePassword.newPassword.$error.maxlength">Password must be in range [2;100]</span>
@@ -61,7 +61,7 @@
 
             <div class="form-group">
                 <label for="confirm-pass">Confirm Password:</label>
-                <input name="confirmPassword" data-compare-to="passwordData.password" data-ng-model="passwordData.confirmPassword" class="form-control" id="confirm-pass" type="password" required />
+                <input name="confirmPassword" data-compare-to="passwordData.newPassword" data-ng-model="passwordData.confirmPassword" class="form-control" id="confirm-pass" type="password" required />
             <span class="validation-error" data-ng-show="changePassword.confirmPassword.$touched && (changePassword.confirmPassword.$dirty || changePassword.confirmPassword.$invalid)">
                 <span data-ng-show="changePassword.confirmPassword.$error.required">Required.</span>
                 <span data-ng-show="!changePassword.confirmPassword.$error.required && changePassword.confirmPassword.$error.compareTo">Password doesn't match!</span>

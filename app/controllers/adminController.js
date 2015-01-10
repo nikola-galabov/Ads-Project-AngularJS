@@ -128,4 +128,19 @@ adminApp.controller('AdminController',function($scope, adminData, $cookieStore, 
         );
     }
 
+    $scope.categories = adminData.adminGetCategories().$promise
+        .then(
+        function(value){
+            $scope.categories = value
+        },
+        function(error) {
+            var msg = error.data.message || 'An error has occurred';
+            $scope.$parent.showErrorMessage(msg);
+        }
+    )
+
+    $scope.reloadCategoryList = function() {
+
+    }
+
 });

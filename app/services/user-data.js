@@ -1,6 +1,6 @@
 var PAGE_SIZE = 10;
-var BASE_URL = 'http://localhost:1337/api';
-//var BASE_URL = 'http://softuni-ads.azurewebsites.net/api';
+//var BASE_URL = 'http://localhost:1337/api';
+var BASE_URL = 'http://softuni-ads.azurewebsites.net/api';
 publicApp.factory('userData', function userData($resource, $cookieStore, $http) {
     //var HEADERS = {'Authorization':'Bearer '+$cookieStore.get('user').acces_token};
     function getHeaders() {

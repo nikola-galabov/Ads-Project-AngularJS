@@ -25,7 +25,7 @@ adminApp.controller('AdminEditUserController', function($scope,$cookieStore, $lo
 
     $scope.passwordData = {
         username: $scope.profile.username,
-        password:'',
+        newPassword:'',
         confirmPassword:''
     }
 
