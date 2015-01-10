@@ -1,12 +1,12 @@
 publicApp.controller('UserController',function($route, $scope, $location, $timeout, userData, $cookieStore){
 
-    (function(){
-        if(!$cookieStore.get('user')){
-            return $location.path('/');
-        } else {
-            init();
-        }
-    })();
+//    (function(){
+//        if(!$cookieStore.get('user')){
+//            return $location.path('/');
+//        } else {
+//            init();
+//        }
+//    })();
 
 
     var lastStatus = 0;

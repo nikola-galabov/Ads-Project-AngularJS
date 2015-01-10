@@ -23,37 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="adminApp.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/modules/adminApp.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="2" selection-start="877" selection-end="877" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="deleteUserController.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/deleteUserController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="68" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+            <state line="3" column="59" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list-users.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/list-users.html">
+      <file leaf-file-name="deleteAdController.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/deleteAdController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="111" selection-start="1653" selection-end="1653" vertical-scroll-proportion="-13.807693" vertical-offset="304" max-vertical-offset="867">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin-delete-user.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin-delete-user.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="0" selection-start="5140" selection-end="5140" vertical-scroll-proportion="-45.03846" vertical-offset="189" max-vertical-offset="1513">
+            <state line="13" column="29" selection-start="317" selection-end="380" vertical-scroll-proportion="0.20203735" vertical-offset="102" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -62,16 +44,16 @@
       <file leaf-file-name="admin-data.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/services/admin-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="28" selection-start="2282" selection-end="2282" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2176">
+            <state line="102" column="19" selection-start="2564" selection-end="2564" vertical-scroll-proportion="0.0" vertical-offset="1689" max-vertical-offset="2278">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
+      <file leaf-file-name="admin-delete-user.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/admin-delete-user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="64" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.3090909" vertical-offset="459" max-vertical-offset="1598">
+            <state line="40" column="6" selection-start="1873" selection-end="1873" vertical-scroll-proportion="-26.153847" vertical-offset="0" max-vertical-offset="782">
               <folding />
             </state>
           </provider>
@@ -113,24 +95,27 @@
         <option value="$PROJECT_DIR$/app/modules/publicApp.js" />
         <option value="$PROJECT_DIR$/app/modules/userApp.js" />
         <option value="$PROJECT_DIR$/app/templates/temp.html" />
-        <option value="$PROJECT_DIR$/app/controllers/editAdController.js" />
-        <option value="$PROJECT_DIR$/app/controllers/editProfile.js" />
         <option value="$PROJECT_DIR$/app/controllers/publicController.js" />
-        <option value="$PROJECT_DIR$/app/controllers/userController.js" />
         <option value="$PROJECT_DIR$/app/controllers/admin.editAdController.js" />
-        <option value="$PROJECT_DIR$/app/controllers/deleteAdController.js" />
         <option value="$PROJECT_DIR$/app/templates/delete-ad.html" />
         <option value="$PROJECT_DIR$/app/templates/admin-delete-ad.html" />
         <option value="$PROJECT_DIR$/app/controllers/admin.deleteAdController.js" />
         <option value="$PROJECT_DIR$/app/templates/admin-edit-ad.html" />
         <option value="$PROJECT_DIR$/app/templates/admin.index.html" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/services/admin-data.js" />
         <option value="$PROJECT_DIR$/app/css/styles.css" />
         <option value="$PROJECT_DIR$/app/controllers/adminController.js" />
         <option value="$PROJECT_DIR$/app/templates/list-users.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin-edit-user.html" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/controllers/admin.editUserController.js" />
+        <option value="$PROJECT_DIR$/app/controllers/userController.js" />
+        <option value="$PROJECT_DIR$/app/controllers/editProfile.js" />
+        <option value="$PROJECT_DIR$/app/controllers/editAdController.js" />
+        <option value="$PROJECT_DIR$/app/controllers/deleteAdController.js" />
+        <option value="$PROJECT_DIR$/app/templates/adminEditUser.html" />
         <option value="$PROJECT_DIR$/app/templates/admin-delete-user.html" />
         <option value="$PROJECT_DIR$/app/modules/adminApp.js" />
+        <option value="$PROJECT_DIR$/app/services/admin-data.js" />
         <option value="$PROJECT_DIR$/app/controllers/deleteUserController.js" />
       </list>
     </option>
@@ -250,6 +235,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -302,7 +305,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -342,20 +345,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/publicController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="36" selection-start="1691" selection-end="1691" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/userApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="373" selection-end="373" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="104" selection-start="578" selection-end="578" vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="850">
@@ -534,34 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/editProfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="57" selection-start="2099" selection-end="2099" vertical-scroll-proportion="1.8183361" vertical-offset="0" max-vertical-offset="1309">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/publicController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="53" selection-start="1985" selection-end="1985" vertical-scroll-proportion="-0.067911714" vertical-offset="1094" max-vertical-offset="1683">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/registerController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="97" selection-start="775" selection-end="775" vertical-scroll-proportion="0.60611206" vertical-offset="0" max-vertical-offset="589">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/loginController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="47" selection-start="450" selection-end="461" vertical-scroll-proportion="0.34634975" vertical-offset="0" max-vertical-offset="589">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin-delete-ad.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="29" selection-start="8774" selection-end="8774" vertical-scroll-proportion="0.86545455" vertical-offset="0" max-vertical-offset="629">
@@ -576,37 +537,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/deleteAdController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="24" selection-start="989" selection-end="989" vertical-scroll-proportion="0.6536503" vertical-offset="176" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin.deleteAdController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="18" selection-start="785" selection-end="785" vertical-scroll-proportion="0.5772496" vertical-offset="0" max-vertical-offset="595">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin-edit-ad.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="105" column="30" selection-start="4813" selection-end="4813" vertical-scroll-proportion="0.32" vertical-offset="1609" max-vertical-offset="2635">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/editAdController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="38" selection-start="777" selection-end="777" vertical-scroll-proportion="0.16298811" vertical-offset="380" max-vertical-offset="969">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin.editAdController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="33" selection-start="185" selection-end="185" vertical-scroll-proportion="0.08658744" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
@@ -625,37 +558,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/userController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="26" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.68251276" vertical-offset="584" max-vertical-offset="1955">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/admin-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="28" selection-start="2282" selection-end="2282" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2176">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/edit-profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="79" selection-start="0" selection-end="4638" vertical-scroll-proportion="-12.846154" vertical-offset="958" max-vertical-offset="1513">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin-delete-user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="5140" selection-end="5140" vertical-scroll-proportion="-45.03846" vertical-offset="189" max-vertical-offset="1513">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/list-users.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="111" selection-start="1653" selection-end="1653" vertical-scroll-proportion="-13.807693" vertical-offset="304" max-vertical-offset="867">
+        <state line="76" column="79" selection-start="0" selection-end="4638" vertical-scroll-proportion="0.63137996" vertical-offset="958" max-vertical-offset="1513">
           <folding />
         </state>
       </provider>
@@ -667,30 +572,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/adminController.js">
+    <entry file="file://$PROJECT_DIR$/app/templates/list-users.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="18" selection-start="2075" selection-end="2075" vertical-scroll-proportion="0.72156197" vertical-offset="663" max-vertical-offset="1938">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/deleteUserController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="68" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/adminApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="2" selection-start="877" selection-end="877" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+        <state line="42" column="16" selection-start="1746" selection-end="1746" vertical-scroll-proportion="-27.461538" vertical-offset="0" max-vertical-offset="867">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="64" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.3090909" vertical-offset="459" max-vertical-offset="1598">
+        <state line="87" column="73" selection-start="4236" selection-end="4236" vertical-scroll-proportion="-15.115385" vertical-offset="1086" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/userController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="11" selection-start="116" selection-end="276" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1955">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/registerController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="97" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/publicController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="53" selection-start="1985" selection-end="1985" vertical-scroll-proportion="0.0" vertical-offset="1094" max-vertical-offset="1683">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin.deleteAdController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="18" selection-start="785" selection-end="785" vertical-scroll-proportion="0.59859157" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin.editAdController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="33" selection-start="185" selection-end="185" vertical-scroll-proportion="0.08802817" vertical-offset="1" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin.editUserController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="41" selection-start="96" selection-end="96" vertical-scroll-proportion="0.029929578" vertical-offset="0" max-vertical-offset="568">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/adminController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="18" selection-start="2075" selection-end="2075" vertical-scroll-proportion="1.8471986" vertical-offset="0" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/editAdController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="11" selection-start="113" selection-end="273" vertical-scroll-proportion="0.25976232" vertical-offset="0" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/editProfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="11" selection-start="117" selection-end="277" vertical-scroll-proportion="0.20203735" vertical-offset="0" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/loginController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="47" selection-start="450" selection-end="461" vertical-scroll-proportion="0.34634975" vertical-offset="0" max-vertical-offset="589">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/adminEditUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="16" selection-start="0" selection-end="1873" vertical-scroll-proportion="0.44363636" vertical-offset="232" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/adminApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="47" selection-start="941" selection-end="941" vertical-scroll-proportion="0.663837" vertical-offset="0" max-vertical-offset="589">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/admin-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="19" selection-start="2564" selection-end="2564" vertical-scroll-proportion="0.0" vertical-offset="1689" max-vertical-offset="2278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/deleteUserController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="59" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin-delete-user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="6" selection-start="1873" selection-end="1873" vertical-scroll-proportion="-26.153847" vertical-offset="0" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/deleteAdController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="29" selection-start="317" selection-end="380" vertical-scroll-proportion="0.20203735" vertical-offset="102" max-vertical-offset="765">
           <folding />
         </state>
       </provider>

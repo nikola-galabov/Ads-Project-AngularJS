@@ -1,13 +1,13 @@
 publicApp.controller('EditAdController', function($scope, $location, $cookieStore, userData){
     var id;
 
-    (function(){
-        if(!$cookieStore.get('user')){
-            return $location.path('/');
-        } else {
-            init();
-        }
-    })();
+//    (function(){
+//        if(!$cookieStore.get('user')){
+//            return $location.path('/');
+//        } else {
+//            init();
+//        }
+//    })();
 
     function init() {
         id = $location.path().split('/');

@@ -1,11 +1,11 @@
 publicApp.controller('EditProfileController', function($scope, userData, $cookieStore, publicData, $location){
-    (function(){
-        if(!$cookieStore.get('user')){
-            return $location.path('/');
-        } else {
-            init();
-        }
-    })();
+//    (function(){
+//        if(!$cookieStore.get('user')){
+//            return $location.path('/');
+//        } else {
+//            init();
+//        }
+//    })();
 
     function init() {
         $scope.towns = publicData.getTowns().$promise

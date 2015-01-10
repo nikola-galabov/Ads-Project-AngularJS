@@ -35,7 +35,7 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         });
 
     var users = $resource(
-        'http://softuni-ads.azurewebsites.net/api/admin/users?PageSize='+ PAGE_SIZE,{},
+        'http://softuni-ads.azurewebsites.net/api/admin/users/:id?PageSize='+ PAGE_SIZE,{id:'@id'},
         {
             update: {
                 method: 'PUT'
@@ -93,6 +93,11 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         return users.get({sortBy:sortby,startPage:page});
     }
 
+    function getUserByUsername(id) {
+        getHeaders();
+        return users.get({id:id});
+    }
+
     function getProfile() {
         getHeaders();
         return profile.get();
@@ -116,6 +121,7 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         adminRejectAd:adminRejectAd,
         adminApproveAd: adminApproveAd,
         getUsersList: getUsersList,
+        getUserByUsername:getUserByUsername,
         getProfile: getProfile,
         editProfile: editProfile,
         changePassword: changePassword

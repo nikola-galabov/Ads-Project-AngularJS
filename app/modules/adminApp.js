@@ -17,8 +17,11 @@ adminApp.config(function($routeProvider){
         templateUrl: 'templates/list-users.html',
         controller: 'AdminController'
     });
-    $routeProvider.when('/admin/user/delete/id',{
-        templateUrl: 'templates/admin-delete-users.html',
+    $routeProvider.when('/admin/users/delete/:username',{
+        templateUrl: 'templates/admin-delete-user.html'
+    });
+    $routeProvider.when('/admin/users/edit/:username',{
+        templateUrl: 'templates/admin-edit-user.html',
         controller: 'DeleteUserController'
     });
 })
