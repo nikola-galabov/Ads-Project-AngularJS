@@ -1,0 +1,46 @@
+<div class="container col-md-10">
+    <div class="container-fluid col-md-12">
+        <div class="col-md-6">
+            <label for="sort">SortBy:</label>
+            <select id="sort" data-ng-model="sortBy" class="form-control">
+                <option value="UserName">Username</option>
+                <option value="Name">Name</option>
+                <option value="Email">Email</option>
+                <option value="Town.Name">Town name</option>
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label for="sortType">SortBy:</label>
+            <select id="sortType" data-ng-model="sortType" class="form-control">
+                <option value="">Ascending</option>
+                <option value="-">Descending</option>
+            </select>
+        </div>
+    </div>
+
+    <button class="btn btn-default" data-ng-click="reloadUsersList(startPage,sortType,sortBy)">Sort</button>
+    <table class="table table-bordered table-responsive table-striped">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Name</th>
+                <th>Town</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+            <tbody>
+                <tr data-ng-repeat="user in usersList.users">
+                    <td>{{user.username}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.townName}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.phoneNumber}}</td>
+                    <td><a href="#/admin/users/edit/{{user.id}}">Edit</a> <a href="#/admin/users/delete/{{user.id}}">Delete</a></td>
+                </tr>
+            </tbody>
+        </thead>
+    </table>
+    <pagination total-items="numItems" ng-show="numItems" ng-model="startPage" data-ng-click="reloadUsersList(startPage,sortBy)"></pagination>
+</div>

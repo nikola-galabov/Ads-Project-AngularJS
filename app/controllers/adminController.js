@@ -47,6 +47,32 @@ adminApp.controller('AdminController',function($scope, adminData){
             )
     }
 
+    $scope.usersList = adminData.getUsersList().$promise
+        .then(
+            function(value){
+                $scope.numItems = value.numItems;
+                return $scope.usersList = value;
+            },
+            function(error){
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
+            }
+        )
+
+    $scope.reloadUsersList = function(page,sortType,sortby) {
+        var sortBy = sortType ? sortType + sortby : sortby ;
+        adminData.getUsersList(page, sortBy).$promise
+            .then(
+                function(value){
+                    $scope.usersList = value;
+                },
+                function(error){
+                    var msg = error.data.message || 'An error has occurred';
+                    $scope.$parent.showErrorMessage(msg);
+                }
+            )
+    }
+
     $scope.reloadAdminAds = function(status, page, townid, categoryid) {
         switch (status) {
             case 'Inactive' : status = 0; break;

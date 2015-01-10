@@ -135,6 +135,9 @@ form div.row {
     background-color: #78FA89;
 }
 
+table {
+    background: wheat;
+}
 footer {
     background-color: #A9D18E;
     padding: 20px;

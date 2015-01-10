@@ -34,6 +34,14 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
             }
         });
 
+    var users = $resource(
+        'http://softuni-ads.azurewebsites.net/api/admin/users?PageSize='+ PAGE_SIZE,{},
+        {
+            update: {
+                method: 'PUT'
+            }
+        });
+
     var profile = $resource(
         'http://softuni-ads.azurewebsites.net/api/user/profile',{},
         {
@@ -53,11 +61,6 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
     function getAdminAds(status,page,townId,categoryId) {
         getHeaders();
         return resource.get({status: status, startPage: page,categoryId: categoryId,townId: townId});
-    }
-
-    function createNewAd(ad) {
-        getHeaders();
-        return resource.save(ad);
     }
 
     function getAdminAdById(id) {
@@ -85,6 +88,11 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         return rejectAd.update({id: id});
     }
 
+    function getUsersList(page,sortby) {
+        getHeaders();
+        return users.get({sortBy:sortby,startPage:page});
+    }
+
     function getProfile() {
         getHeaders();
         return profile.get();
@@ -102,12 +110,12 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
 
     return {
         getAdminAds: getAdminAds,
-        createAd: createNewAd,
         getAdminAdById: getAdminAdById,
         adminEditAd: adminEditAd,
         adminDeleteAd: adminDeleteAd,
         adminRejectAd:adminRejectAd,
         adminApproveAd: adminApproveAd,
+        getUsersList: getUsersList,
         getProfile: getProfile,
         editProfile: editProfile,
         changePassword: changePassword

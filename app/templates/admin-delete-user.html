@@ -1,0 +1,84 @@
+<div data-ng-controller="EditProfileController" class="col-md-10 container container-fluid">
+    <div class="container-fluid col-md-6">
+        <form name="editProfile" class="validated-form form wrapper container-fluid center-block">
+            <h3 class="text-center"><strong>Edit profile</strong></h3>
+            <hr />
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input name="name" data-ng-model="profile.name" class="form-control" id="name" type="text" required />
+            <span class="validation-error" data-ng-show="editProfile.name.$touched && (editProfile.name.$dirty || editProfile.name.$invalid)">
+                <span data-ng-show="editProfile.name.$error.required">Required.</span>
+            </span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input name="email" data-ng-model="profile.email" class="form-control" id="email" type="email" required />
+            <span class="validation-error" data-ng-show="editProfile.email.$touched && (editProfile.email.$dirty || editProfile.email.$invalid)">
+                <span data-ng-show="editProfile.email.$error.required">Required.</span>
+                <span data-ng-show="editProfile.email.$error.email">Invaild email!</span>
+            </span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input data-ng-model="profile.phoneNumber" class="form-control" id="phone" type="text" />
+            </div>
+
+            <div class="form-group">
+                <label for="town">Town:</label>
+                <select id="town" data-ng-model="profile.townId" class="form-control">
+                    <option data-ng-attr-selected="{{town.id==profile.townId && 'true' || 'false' }}" data-ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button data-ng-click="updateProfile(profile)" class="pull-left btn btn-default">Update</button>
+                <a href="#/user/home" class="pull-right btn btn-default">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="container-fluid col-md-6">
+        <form name="changePassword" class="validated-form form wrapper container-fluid center-block">
+            <h3 class="text-center"><strong>Change password</strong></h3>
+            <hr />
+
+            <div class="form-group">
+                <label for="old-pass">Old password:</label>
+                <input name="password" data-ng-model="passwordData.oldPassword" data-minLength="2" data-maxLength="100" class="form-control" id="old-pass" type="password" required />
+            <span class="validation-error" data-ng-show="changePassword.password.$touched && (changePassword.password.$dirty || changePassword.password.$invalid)">
+                <span data-ng-show="changePassword.password.$error.required">Required.</span>
+                <span data-ng-show="changePassword.password.$error.minlength || changePassword.password.$error.maxlength">Password must be in range [2;100]</span>
+            </span>
+            </div>
+
+            <div class="form-group">
+                <label for="new-pass">New Password:</label>
+                <input name="newPassword" data-ng-model="passwordData.newPassword" data-minLength="2" data-maxLength="100" class="form-control" id="new-pass" type="password" required />
+            <span class="validation-error" data-ng-show="changePassword.newPassword.$touched && (changePassword.newPassword.$dirty || changePassword.newPassword.$invalid)">
+                <span data-ng-show="changePassword.newPassword.$error.required">Required.</span>
+                <span data-ng-show="changePassword.newPassword.$error.minlength || changePassword.newPassword.$error.maxlength">Password must be in range [2;100]</span>
+            </span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-pass">Confirm Password:</label>
+                <input name="confirmPassword" data-compare-to="passwordData.newPassword" data-ng-model="passwordData.confirmPassword" class="form-control" id="confirm-pass" type="password" required />
+            <span class="validation-error" data-ng-show="changePassword.confirmPassword.$touched && (changePassword.confirmPassword.$dirty || changePassword.confirmPassword.$invalid)">
+                <span data-ng-show="changePassword.confirmPassword.$error.required">Required.</span>
+                <span data-ng-show="!changePassword.confirmPassword.$error.required && changePassword.confirmPassword.$error.compareTo">Password doesn't match!</span>
+            </span>
+            </div>
+
+            <div class="form-group">
+                <button data-ng-disabled="!changePassword.$valid" data-ng-click="changePassword(passwordData)" class="pull-left btn btn-default">Change Password</button>
+                <a href="#/user/home" class="pull-right btn btn-default">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+
+
+</div>
