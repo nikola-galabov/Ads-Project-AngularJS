@@ -4,12 +4,12 @@
             <label for="sort">SortBy:</label>
             <select id="sort" data-ng-model="sortBy" class="form-control">
                 <option value="Name">Name</option>
-                <option value="Email">Id</option>
+                <option value="Id">Id</option>
             </select>
         </div>
 
         <div class="col-md-6">
-            <label for="sortType">SortBy:</label>
+            <label for="sortType">Sort type:</label>
             <select id="sortType" data-ng-model="sortType" class="form-control">
                 <option value="">Ascending</option>
                 <option value="-">Descending</option>
@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <button class="btn btn-default" data-ng-click="reloadCategories(startPage,sortType,sortBy)">Sort</button>
+    <button class="btn btn-default" data-ng-click="reloadCategoriesList(startPage,sortType,sortBy)">Sort</button>
     <table class="table table-bordered table-responsive table-striped">
         <thead>
         <tr>
@@ -26,14 +26,14 @@
             <th>Action</th>
         </tr>
         <tbody>
-        
-        <tr data-ng-repeat="category in categories.categories">
+
+        <tr data-ng-repeat="category in categoriesList.categories">
             <td>{{category.id}}</td>
             <td>{{category.username}}</td>
-            <td><button class="btn btn-sm" data-ng-click="editCategory(user)">Edit</button> <button class="btn btn-sm" data-ng-click="deleteCategory(user)">Delete</button></td>
+            <td><button class="btn btn-sm" data-ng-click="editCategory(user)">Edit</button> <button class="btn btn-sm" data-ng-click="deleteCategory(category)">Delete</button></td>
         </tr>
         </tbody>
         </thead>
     </table>
-    <pagination total-items="numItems" ng-show="numItems" ng-model="startPage" data-ng-click="reloadCategoryList(startPage,sortBy)"></pagination>
+    <pagination total-items="catItems" ng-show="catItems" ng-model="startPage" data-ng-click="reloadCategoriesList(startPage,sortBy)"></pagination>
 </div>

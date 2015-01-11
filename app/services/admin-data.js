@@ -62,7 +62,7 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         });
 
     var categories = $resource(
-        BASE_URL+'admin/Categories/:id',{id:'@id'},
+        BASE_URL+'admin/Categories/:id?PageSize='+ PAGE_SIZE,{id:'@id'},
         {
             update: {
                 method: 'PUT'
@@ -121,14 +121,14 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         return password.update(data);
     }
 
-    function adminGetCategories(){
+    function adminGetCategories(page, sortby){
         getHeaders();
-        return categories.get()
+        return categories.get({sortBy:sortby,startPage:page})
     }
 
-    function adminGetCategoriesById(id){
+    function adminDeleteCategory(id){
         getHeaders();
-        return categories.get({id:id})
+        return categories.delete({id:id})
     }
 
     return {
@@ -142,6 +142,9 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         adminDeleteUser: adminDeleteUser,
         adminEditUser: adminEditUser,
         adminSetPassword: adminSetPassword,
-        adminGetCategories: adminGetCategories
+        adminGetCategories: adminGetCategories,
+        adminDeleteCategory:adminDeleteCategory
     }
+
+
 });

@@ -20,6 +20,8 @@ adminApp.controller('AdminController',function($scope, adminData, $cookieStore, 
         $scope.status = 'all';
         $scope.startPage = 1;
         $scope.numItems;
+        $scope.sortBy;
+        $scope.sortType;
 
         $scope.adminAds = adminData.getAdminAds().$promise
             .then(
@@ -128,19 +130,65 @@ adminApp.controller('AdminController',function($scope, adminData, $cookieStore, 
         );
     }
 
-    $scope.categories = adminData.adminGetCategories().$promise
+    $scope.categoriesList = adminData.adminGetCategories().$promise
         .then(
         function(value){
-            $scope.categories = value
+            $scope.catItems = value.numItems;
+            $scope.startPage = 1;
+            $scope.categoriesList = value;
         },
         function(error) {
             var msg = error.data.message || 'An error has occurred';
             $scope.$parent.showErrorMessage(msg);
         }
-    )
+    );
 
-    $scope.reloadCategoryList = function() {
+    var categoriesLastState = {
+        sortBy:null,
+        sortType:null
+    }
 
+    $scope.reloadCategoriesList = function(page,sortType,sortby) {
+
+        if(sortby!=categoriesLastState.sortBy||sortType!=lastState.sortType){
+            $scope.startPage = 1;
+            page = 1;
+            lastState.sortType = sortType;
+            lastState.sortBy = sortby;
+        }
+        var sortBy = sortType+sortby;
+        if(!sortType){
+            sortBy=sortby;
+        }
+
+        adminData.adminGetCategories(page, sortBy).$promise
+            .then(
+            function(value){
+                $scope.categoriesList = value;
+            },
+            function(error){
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
+            }
+        )
+    }
+
+    $scope.adminDeleteCategory = function(id){
+        adminData.adminDeleteCategory(id).$promise
+            .then(
+                function(){
+                    $scope.$parent.showSuccessMessage('Category successfully deleted!');
+                },
+                function(error){
+                    var msg = error.data.message || 'An error has occurred';
+                    $scope.$parent.showErrorMessage(msg);
+                }
+            )
+    }
+
+    $scope.deleteCategory= function (category) {
+        $scope.$parent.categoryToDelete = category;
+        $location.path('/admin/categories/delete/category.username');
     }
 
 });
