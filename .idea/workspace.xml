@@ -23,73 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="admin.editUserController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/admin.editUserController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="42" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/adminController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="67" selection-start="6031" selection-end="6031" vertical-scroll-proportion="0.0" vertical-offset="2832" max-vertical-offset="3400">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminApp.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="adminApp.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/modules/adminApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="48" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="731">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.category-delete.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin.category-delete.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="36" selection-start="321" selection-end="321" vertical-scroll-proportion="0.16068053" vertical-offset="0" max-vertical-offset="529">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.categories.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/admin.categories.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="36" selection-start="1042" selection-end="1050" vertical-scroll-proportion="-11.346154" vertical-offset="198" max-vertical-offset="748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="publicController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/publicController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="29" selection-start="3133" selection-end="3133" vertical-scroll-proportion="0.0" vertical-offset="1370" max-vertical-offset="1955">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin-data.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/services/admin-data.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="47" selection-start="3645" selection-end="3645" vertical-scroll-proportion="0.0" vertical-offset="1995" max-vertical-offset="2635">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list-users.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/list-users.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="126" selection-start="1901" selection-end="1917" vertical-scroll-proportion="-16.576923" vertical-offset="317" max-vertical-offset="867">
+            <state line="24" column="54" selection-start="992" selection-end="992" vertical-scroll-proportion="0.6926995" vertical-offset="0" max-vertical-offset="867">
               <folding />
             </state>
           </provider>
@@ -98,7 +35,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="7" selection-start="4218" selection-end="4218" vertical-scroll-proportion="-44.423077" vertical-offset="375" max-vertical-offset="1632">
+            <state line="10" column="73" selection-start="385" selection-end="385" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1632">
               <folding />
             </state>
           </provider>
@@ -114,7 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/app.js" />
         <option value="$PROJECT_DIR$/app/services/ads-data.js" />
         <option value="$PROJECT_DIR$/app/public.js" />
         <option value="$PROJECT_DIR$/app/modules/public.js" />
@@ -131,14 +67,12 @@
         <option value="$PROJECT_DIR$/app/templates/register.html" />
         <option value="$PROJECT_DIR$/app/controllers/registerController.js" />
         <option value="$PROJECT_DIR$/app/templates/edit-ad.html" />
-        <option value="$PROJECT_DIR$/app/templates/my-ads.html" />
         <option value="$PROJECT_DIR$/app/controllers/loginController.js" />
         <option value="$PROJECT_DIR$/app/modules/publicApp.js" />
         <option value="$PROJECT_DIR$/app/templates/temp.html" />
         <option value="$PROJECT_DIR$/app/templates/delete-ad.html" />
         <option value="$PROJECT_DIR$/app/templates/admin-delete-ad.html" />
         <option value="$PROJECT_DIR$/app/templates/admin-edit-ad.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin.index.html" />
         <option value="$PROJECT_DIR$/app/css/styles.css" />
         <option value="$PROJECT_DIR$/app/templates/adminEditUser.html" />
         <option value="$PROJECT_DIR$/app/controllers/userController.js" />
@@ -150,20 +84,24 @@
         <option value="$PROJECT_DIR$/app/templates/edit-profile.html" />
         <option value="$PROJECT_DIR$/app/controllers/editProfile.js" />
         <option value="$PROJECT_DIR$/app/controllers/admin.editAdController.js" />
-        <option value="$PROJECT_DIR$/app/templates/admin-delete-user.html" />
-        <option value="$PROJECT_DIR$/app/templates/list-users.html" />
-        <option value="$PROJECT_DIR$/app/controllers/deleteUserController.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/services/user-data.js" />
         <option value="$PROJECT_DIR$/app/services/public-data.js" />
         <option value="$PROJECT_DIR$/app/templates/admin-edit-user.html" />
         <option value="$PROJECT_DIR$/app/controllers/admin.editUserController.js" />
-        <option value="$PROJECT_DIR$/app/services/admin-data.js" />
-        <option value="$PROJECT_DIR$/app/controllers/publicController.js" />
-        <option value="$PROJECT_DIR$/app/modules/adminApp.js" />
         <option value="$PROJECT_DIR$/app/templates/admin.category-delete.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin.categories.html" />
+        <option value="$PROJECT_DIR$/app/controllers/deleteUserController.js" />
+        <option value="$PROJECT_DIR$/app/modules/adminApp.js" />
+        <option value="$PROJECT_DIR$/app/controllers/publicController.js" />
+        <option value="$PROJECT_DIR$/app/templates/admin-delete-user.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin.town-delete.html" />
+        <option value="$PROJECT_DIR$/app/services/admin-data.js" />
         <option value="$PROJECT_DIR$/app/controllers/adminController.js" />
+        <option value="$PROJECT_DIR$/app/templates/admin.index.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin.categories.html" />
+        <option value="$PROJECT_DIR$/app/templates/list-towns.html" />
+        <option value="$PROJECT_DIR$/app/templates/list-users.html" />
+        <option value="$PROJECT_DIR$/app/templates/my-ads.html" />
+        <option value="$PROJECT_DIR$/app/index.html" />
       </list>
     </option>
   </component>
@@ -200,7 +138,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -307,6 +244,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -351,8 +289,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -360,7 +298,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29833838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17069486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -368,12 +306,33 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29814127" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout>
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -392,16 +351,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="44" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="595" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="39" selection-start="3480" selection-end="3480" vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1275" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/publicController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
@@ -416,9 +365,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/public-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="20" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="544">
-          <folding />
-        </state>
+        <state line="17" column="20" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="544" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/login.html">
@@ -447,9 +394,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/public-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="80" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="646">
-          <folding />
-        </state>
+        <state line="1" column="80" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="646" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/index.html">
@@ -492,11 +437,6 @@
         <state line="92" column="33" selection-start="0" selection-end="3544" vertical-scroll-proportion="0.8036364" vertical-offset="1122" max-vertical-offset="1870" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/my-ads.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="121" selection-start="10827" selection-end="10845" vertical-scroll-proportion="2.5066164" vertical-offset="51" max-vertical-offset="1547" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin-delete-ad.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="29" selection-start="8774" selection-end="8774" vertical-scroll-proportion="0.86545455" vertical-offset="0" max-vertical-offset="629" />
@@ -517,11 +457,6 @@
         <state line="138" column="21" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.0" vertical-offset="1961" max-vertical-offset="2550">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin.index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="10" selection-start="11677" selection-end="11677" vertical-scroll-proportion="0.6909091" vertical-offset="1048" max-vertical-offset="1598" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/registerController.js">
@@ -553,14 +488,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/userController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="13" selection-start="2687" selection-end="2687" vertical-scroll-proportion="0.94207835" vertical-offset="858" max-vertical-offset="1955">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="64" selection-start="9688" selection-end="9688" vertical-scroll-proportion="-16.5" vertical-offset="710" max-vertical-offset="1258" />
+        <state line="83" column="13" selection-start="2687" selection-end="2687" vertical-scroll-proportion="0.94207835" vertical-offset="858" max-vertical-offset="1955" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/editProfile.js">
@@ -583,16 +511,9 @@
         <state line="20" column="16" selection-start="569" selection-end="679" vertical-scroll-proportion="0.57921636" vertical-offset="0" max-vertical-offset="765" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/deleteUserController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="5" selection-start="217" selection-end="826" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/publicApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="3" selection-start="551" selection-end="551" vertical-scroll-proportion="0.43293718" vertical-offset="0" max-vertical-offset="589">
-          <folding />
-        </state>
+        <state line="15" column="3" selection-start="551" selection-end="551" vertical-scroll-proportion="0.43293718" vertical-offset="0" max-vertical-offset="589" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/user-data.js">
@@ -604,51 +525,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/public-data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/edit-profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="95" selection-start="0" selection-end="4642" vertical-scroll-proportion="0.7466919" vertical-offset="880" max-vertical-offset="1513">
-          <folding />
-        </state>
+        <state line="75" column="95" selection-start="0" selection-end="4642" vertical-scroll-proportion="0.7466919" vertical-offset="880" max-vertical-offset="1513" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin-edit-user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="87" selection-start="3705" selection-end="3705" vertical-scroll-proportion="0.3327032" vertical-offset="895" max-vertical-offset="1445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="7" selection-start="4218" selection-end="4218" vertical-scroll-proportion="-44.423077" vertical-offset="375" max-vertical-offset="1632">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/list-users.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="126" selection-start="1901" selection-end="1917" vertical-scroll-proportion="-16.576923" vertical-offset="317" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/admin-data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="47" selection-start="3645" selection-end="3645" vertical-scroll-proportion="0.0" vertical-offset="1995" max-vertical-offset="2635">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/publicController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="29" selection-start="3133" selection-end="3133" vertical-scroll-proportion="0.0" vertical-offset="1370" max-vertical-offset="1955">
-          <folding />
-        </state>
+        <state line="63" column="87" selection-start="3705" selection-end="3705" vertical-scroll-proportion="0.3327032" vertical-offset="895" max-vertical-offset="1445" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin.editUserController.js">
@@ -658,37 +545,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin-delete-user.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/deleteUserController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="66" selection-start="0" selection-end="1998" vertical-scroll-proportion="0.6710775" vertical-offset="206" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/adminApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="48" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin.categories.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="36" selection-start="1042" selection-end="1050" vertical-scroll-proportion="-11.346154" vertical-offset="198" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/adminController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="67" selection-start="6031" selection-end="6031" vertical-scroll-proportion="0.0" vertical-offset="2798" max-vertical-offset="3400">
+        <state line="7" column="49" selection-start="261" selection-end="261" vertical-scroll-proportion="0.20950705" vertical-offset="0" max-vertical-offset="568">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin.category-delete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="36" selection-start="321" selection-end="321" vertical-scroll-proportion="0.16068053" vertical-offset="0" max-vertical-offset="529">
+        <state line="9" column="98" selection-start="0" selection-end="741" vertical-scroll-proportion="0.27818182" vertical-offset="0" max-vertical-offset="550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/publicController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="29" selection-start="3103" selection-end="3103" vertical-scroll-proportion="0.0" vertical-offset="1336" max-vertical-offset="1972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin-delete-user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1998" selection-end="1998" vertical-scroll-proportion="0.8036364" vertical-offset="204" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="64" selection-start="9688" selection-end="9688" vertical-scroll-proportion="-33.423077" vertical-offset="270" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/my-ads.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="73" selection-start="10797" selection-end="10797" vertical-scroll-proportion="0.67863894" vertical-offset="1018" max-vertical-offset="1547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/list-users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="73" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.86389416" vertical-offset="291" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/admin-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="173" column="48" selection-start="4268" selection-end="4268" vertical-scroll-proportion="1.057725" vertical-offset="2318" max-vertical-offset="3179">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin.index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="73" selection-start="11718" selection-end="11752" vertical-scroll-proportion="0.8" vertical-offset="1022" max-vertical-offset="1598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/list-towns.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="74" selection-start="895" selection-end="895" vertical-scroll-proportion="0.68" vertical-offset="0" max-vertical-offset="550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin.categories.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="73" selection-start="1719" selection-end="1719" vertical-scroll-proportion="0.7836364" vertical-offset="266" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin.town-delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="74" selection-start="582" selection-end="597" vertical-scroll-proportion="0.27818182" vertical-offset="0" max-vertical-offset="550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="73" selection-start="385" selection-end="385" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/adminController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="33" selection-start="143" selection-end="143" vertical-scroll-proportion="0.08658744" vertical-offset="0" max-vertical-offset="5117">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/adminApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="54" selection-start="992" selection-end="992" vertical-scroll-proportion="0.6926995" vertical-offset="0" max-vertical-offset="867">
           <folding />
         </state>
       </provider>

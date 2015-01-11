@@ -35,5 +35,9 @@
         </tbody>
         </thead>
     </table>
-    <pagination total-items="catItems" ng-show="catItems" ng-model="startPage" data-ng-click="reloadCategoriesList(startPage,sortBy)"></pagination>
+    <div>
+        <input type="text" data-ng-model="newCategory.name" required />
+        <button data-ng-disabled="!newCategory.name" class="btn-default" data-ng-click="createNewCategory(newCategory)">Create new Category</button>
+    </div>
+    <pagination total-items="catItems" max-size="4" boundary-links="true" ng-show="catItems" ng-model="startPage" data-ng-click="reloadCategoriesList(startPage,sortBy)"></pagination>
 </div>

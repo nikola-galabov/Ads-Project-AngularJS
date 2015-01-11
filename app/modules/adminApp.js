@@ -29,8 +29,16 @@ adminApp.config(function($routeProvider){
         templateUrl: 'templates/admin.categories.html',
         controller: 'AdminController'
     });
-    $routeProvider.when('admin/categories/delete/:username',{
+    $routeProvider.when('/admin/towns/list/',{
+        templateUrl: 'templates/list-towns.html',
+        controller: 'AdminController'
+    });
+    $routeProvider.when('/admin/categories/delete/:username',{
         templateUrl: 'templates/admin.category-delete.html',
+        controller: 'AdminController'
+    });
+    $routeProvider.when('/admin/town/delete/:username',{
+        templateUrl: 'templates/admin.town-delete.html',
         controller: 'AdminController'
     });
 

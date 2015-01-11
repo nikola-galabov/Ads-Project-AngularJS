@@ -5,7 +5,9 @@
             <hr />
             <div class="form-group">
                 <label for="username">Category:</label>
-                <input data-ng-disabled="true" name="username" data-ng-model="category.userName" class="form-control" id="username" type="text" required />
+                {{category}}
+                <input data-ng-disabled="true" name="username" data-ng-model="categoryToDelete.username" class="form-control" id="username" type="text" required />
+                <button class="btn-default" data-ng-click="adminDeleteCategory(categoryToDelete.id)">Delete</button>
             </div>
         </form>
     </div>

@@ -5,10 +5,7 @@ adminApp.controller('DeleteUserController',function($scope,adminData,$cookieStor
         }
     })();
 
-
-
     $scope.profile = $scope.$parent.userToDelete;
-
 
     $scope.deleteUser = function(username) {
         adminData.adminDeleteUser(username).$promise

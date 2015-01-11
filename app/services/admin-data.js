@@ -69,6 +69,14 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
             }
         });
 
+    var towns = $resource(
+        BASE_URL+'admin/Towns/:id',{id:'@id'},
+        {
+            update: {
+                method: 'PUT'
+            }
+        });
+
 
 
     function getAdminAds(status,page,townId,categoryId) {
@@ -126,9 +134,29 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         return categories.get({sortBy:sortby,startPage:page})
     }
 
+    function adminCreateCategory(category){
+        getHeaders();
+        return categories.save(category)
+    }
+
     function adminDeleteCategory(id){
         getHeaders();
         return categories.delete({id:id})
+    }
+
+    function adminGetTowns(page, sortby){
+        getHeaders();
+        return towns.get({sortBy:sortby,startPage:page,PageSize:PAGE_SIZE})
+    }
+
+    function adminCreateTowns(town){
+        getHeaders();
+        return towns.save(town)
+    }
+
+    function adminDeleteTown(id){
+        getHeaders();
+        return towns.delete({id:id})
     }
 
     return {
@@ -143,7 +171,11 @@ adminApp.factory('adminData', function adminData($resource, $cookieStore, $http)
         adminEditUser: adminEditUser,
         adminSetPassword: adminSetPassword,
         adminGetCategories: adminGetCategories,
-        adminDeleteCategory:adminDeleteCategory
+        adminCreateCategory:adminCreateCategory,
+        adminDeleteCategory:adminDeleteCategory,
+        adminGetTowns:adminGetTowns,
+        adminCreateTowns:adminCreateTowns,
+        adminDeleteTown:adminDeleteTown
     }
 
 

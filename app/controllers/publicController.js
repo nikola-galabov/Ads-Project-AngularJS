@@ -99,6 +99,7 @@ publicApp.controller('PublicController', function PublicController($scope, $cook
 
     $scope.userToDelete = {};
     $scope.categoryToDelete={};
+    $scope.townToDelete={};
 
     $scope.logout = function() {
         $cookieStore.remove('user');

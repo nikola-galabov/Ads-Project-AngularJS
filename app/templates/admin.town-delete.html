@@ -1,0 +1,15 @@
+<div class="col-md-10 container container-fluid">
+    <div class="container-fluid col-md-6">
+        <form name="editProfile" class="validated-form form wrapper container-fluid center-block">
+            <h3 class="text-center"><strong>Delete Town</strong></h3>
+            <hr />
+            <div class="form-group">
+                <label for="username">Town:</label>
+
+                <input data-ng-disabled="true" name="username" data-ng-model="town.username" class="form-control" id="username" type="text" required />
+                <button class="btn-default" data-ng-click="adminDeleteTown(town.id)">Delete</button>
+            </div>
+        </form>
+    </div>
+
+</div>

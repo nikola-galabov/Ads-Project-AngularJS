@@ -1,0 +1,24 @@
+<div class="container col-md-10">
+    <table class="table table-bordered table-responsive table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Town</th>
+            <th>Action</th>
+        </tr>
+        <tbody>
+        <tr data-ng-repeat="town in townsList.towns">
+            <td>{{town.id}}</td>
+            <td>{{town.username}}</td>
+            <td><button class="btn btn-sm" data-ng-click="edtTown(town)">Edit</button> <button class="btn btn-sm" data-ng-click="deleteTown(town)">Delete</button></td>
+        </tr>
+        </tbody>
+        </thead>
+    </table>
+    <div>
+        <input type="text" data-ng-model="newTown.name" required />
+        <button data-ng-disabled="!newTown.name" class="btn-default" data-ng-click="createNewTown(newTown)">Create new Town</button>
+    </div>
+
+    <pagination total-items="townItems" max-size="4" boundary-links="true" ng-show="townItems" ng-model="startPage" data-ng-click="reloadTownsList(startPage,sortBy)"></pagination>
+</div>

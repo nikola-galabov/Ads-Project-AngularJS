@@ -90,7 +90,7 @@ adminApp.controller('AdminController',function($scope, adminData, $cookieStore, 
 
     $scope.deleteUser= function (user) {
         $scope.$parent.userToDelete = user;
-        $location.path('/admin/users/delete/user.username');
+        $location.path('/admin/users/delete/'+user.username);
     }
 
     $scope.edtUser = function (user) {
@@ -150,7 +150,7 @@ adminApp.controller('AdminController',function($scope, adminData, $cookieStore, 
 
     $scope.reloadCategoriesList = function(page,sortType,sortby) {
 
-        if(sortby!=categoriesLastState.sortBy||sortType!=lastState.sortType){
+        if(sortby!=categoriesLastState.sortBy||sortType!=categoriesLastState.sortType){
             $scope.startPage = 1;
             page = 1;
             lastState.sortType = sortType;
@@ -172,6 +172,106 @@ adminApp.controller('AdminController',function($scope, adminData, $cookieStore, 
             }
         )
     }
+    $scope.townItems;
+    $scope.townsList = adminData.adminGetTowns().$promise
+        .then(
+        function(value){
+            $scope.townItems = value.numItems;
+            $scope.startPage = 1;
+            $scope.townsList = value;
+        },
+        function(error) {
+            var msg = error.data.message || 'An error has occurred';
+            $scope.$parent.showErrorMessage(msg);
+        }
+    );
+
+    var townsLastState = {
+        sortBy:null,
+        sortType:null
+    }
+
+    $scope.reloadTownsList = function(page,sortType,sortby) {
+
+        if(sortby!=townsLastState.sortBy||sortType!=townsLastState.sortType){
+            $scope.startPage = 1;
+            page = 1;
+            townsLastState.sortType = sortType;
+            townsLastState.sortBy = sortby;
+        }
+        var sortBy = sortType+sortby;
+        if(!sortType){
+            sortBy=sortby;
+        }
+
+        adminData.adminGetTowns(page, sortBy).$promise
+            .then(
+            function(value){
+                $scope.townsList = value;
+            },
+            function(error){
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
+            }
+        )
+    }
+
+    $scope.newTown = {
+        'name':''
+    }
+
+    $scope.createNewTown = function(town){
+        adminData.adminCreateTowns(town).$promise
+            .then(
+                function(success){
+                    $scope.$parent.showSuccessMessage('Town successfully created!');
+                },
+                function(error){
+                    var msg = error.data.message || 'An error has occurred';
+                    $scope.$parent.showErrorMessage(msg);
+                }
+            )
+    }
+
+    $scope.newCategory = {
+        'name':''
+    }
+
+    $scope.createNewCategory = function(category) {
+        adminData.adminCreateCategory(category).$promise
+            .then(
+            function(success){
+                $scope.$parent.showSuccessMessage('Category successfully created!');
+            },
+            function(error){
+                var msg = error.data.message || 'An error has occurred';
+                $scope.$parent.showErrorMessage(msg);
+            }
+        )
+    }
+
+    $scope.town = $scope.$parent.townToDelete ;
+    $scope.deleteTown = function(town) {
+
+        $scope.$parent.townToDelete = town;
+        $location.path('/admin/town/delete/'+town.username);
+    }
+
+    $scope.adminDeleteTown= function(id){
+        adminData.adminDeleteTown(id).$promise
+            .then(
+                function(){
+                    $scope.$parent.showSuccessMessage('Town successfully deleted!');
+                    $location.path('/admin/towns/list');
+                },
+                function(error){
+                    var msg = error.data.message || 'An error has occurred';
+                    $scope.$parent.showErrorMessage(msg);
+                }
+            )
+    }
+
+    $scope.categoryToDelete;
 
     $scope.adminDeleteCategory = function(id){
         adminData.adminDeleteCategory(id).$promise
@@ -189,6 +289,7 @@ adminApp.controller('AdminController',function($scope, adminData, $cookieStore, 
     $scope.deleteCategory= function (category) {
         $scope.$parent.categoryToDelete = category;
         $location.path('/admin/categories/delete/category.username');
+        $scope.categoryToDelete = category;
     }
 
 });
